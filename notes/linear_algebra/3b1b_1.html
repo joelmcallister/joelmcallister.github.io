@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Matrices as linear transformations</h3>
+
+        <in>
+            A really nice intuition for a linear transformation is to think of it as replacement of our
+            basis vectors (`i` and `j` when working in two dimensions) with a set of new basis vectors.
+            Handily, we can then calculate the vector that `[(x), (y)] = x i + y j`  is transformed to by
+            replacing `i` and `j` with our new basis vectors:
+
+            <in></in>`3i + 7j to 3[(4), (2)] + 7[(3), (11)]`.
+
+            This gives us an intuition for matrix-vector multiplication:
+
+            <in></in>`[(4, 3), (2, 11)][(3), (7)] = 3[(4), (2)] + 7[(3), (11)] = [(3 * 4 + 7 * 3), (3 * 2 + 7 * 11)] = [(33), (83)]`.
+            &nbsp; 
+        </in>
+
+        <h3>Matrix multiplication as composition</h3>
+
+        <in>
+            This also gives an intuition for matrix multiplication:
+
+            Consider `[(color(blue) 4, color(orange) 7), (color(blue) 3, color(orange) 4)]
+                    [(color(red) 3, color(green) 5), (color(red) 4, color(green) 8)]`
+
+            Our first column in given by <in style="margin-left:52px"></in>`[(color(blue) 4, color(orange) 7), (color(blue) 3, color(orange) 4)][color(red)((3), (4))]`,
+
+            and our second column is given by `[(color(blue) 4, color(orange) 7), (color(blue) 3, color(orange) 4)][color(green)((5), (8))]`.
+
+            In the above example, since `[color(red)((3), (4))]` and `[color(green)((5), (8))]` represent our transformed basis vectors,
+            we can apply the second linear transformation to  our transformed basis vectors to get our
+            final basis vectors.
+            &nbsp;
+        </in>
+
+        
+        <div style="font-size: 0.85em">
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">Linear transformations and matrices | Chapter 3, Essence of linear algebra</a>
+            <a href="https://www.youtube.com/watch?v=XkY2DOUCWMU&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">Matrix multiplication as composition | Chapter 4, Essence of linear algebra</a>
+        </div>
+    </body>
+</html>
