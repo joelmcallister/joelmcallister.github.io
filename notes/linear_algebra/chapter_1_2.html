@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Equation of line</h3>
+
+        <in> &nbsp;
+            `bb v = bb a + lambda bb d`
+            `bb v = bb a + lambda \ (bb b - bb a)`
+            `bb v = (1 - lambda) \ bb a  + lambda bb b`
+
+        </in>
+
+        For a line segment, simply restrict `lambda` to `0 <= lambda <= 1`.
+
+        <h4>Cross product alternative</h4>
+
+        <in> &nbsp;
+            `bb v xx bb d = bb a xx bb d`
+
+            (see notes on cross product)
+
+            <b>N.B.</b> Be careful not to confuse this with the equation of a plane (see below).
+            &nbsp;
+        </in>
+
+        <h3>Distance between lines</h3>
+        
+        Consider two lines, `l_1` and `l_2`, respectively:
+
+        <in>
+            `bb v = bb a + lambda bb c`
+            `bb w = bb b + mu bb d`
+        </in>
+
+        Then the general displacement vector from a point on `l_1` to  a
+        point on `l_2` would be:
+
+        <in>
+            `bb g = bb w - bb v = (bb b - bb a) + mu bb d - lambda bb c`
+        </in>
+
+        Since the line joining the closest points on each line must be
+        orthogonal to both the original lines, we can use the dot product
+        to find these points.
+        
+        <in>
+            `bb g * bb v = 0`
+            `bb g * bb w = 0`
+        </in>
+
+        Then simply solve the resulting simultaneous equations for `lambda` and `mu`.
+
+        <h3>Equation of a plane</h3>
+
+        <in> &nbsp;
+            `bb v = bb a + lambda bb d + mu bb e`
+            `bb v = bb a + lambda \ (bb b - bb a) + mu \ (bb c - bb a)` &nbsp; (for position vectors `bb a`, `bb b` and `bb c`)
+            `bb v = (1 - lambda - mu) \ bb a + lambda bb b + mu bb c`
+        </in>
+
+        Alternatively, the dot product can be used to describe a plane:
+
+        <in>
+            `(bb v - bb a) * bb n = 0`
+            `bb v * bb n = bb a * bb n = d`
+
+            where `bb n` is a <i>normal</i> vector (a vector that is perpendicular
+            to the plane).
+        </in>
+
+        An advantage of the latter representation is that it lends itself to translation
+        into a Cartesian equation.
+
+        <in>
+            Let `bb n = [(a), (b ), (c)]` and `bb v = [(x), (y), (z)]`.
+            
+            `bb v * bb n = bb a * bb n \ \ => \ \ ax + by + cz = d`
+            
+            for some constant `d`.
+            &nbsp;
+        </in>
+
+        <h3>Distance between parallel planes</h3>
+
+        Planes `Pi_1` and `Pi_2` are parallel. &nbsp; `<=>` &nbsp; Planes `Pi_1` and `Pi_2` share a normal vector `bb n`.
+
+        Pick some point `A` on `Pi_1` with position vector `bb a`, then find `lambda` such that `bb a + lambda bb n`
+        is the position vector of some point on `Pi_2`.
+
+        Consider the following two planes
+
+        <in>
+            `bb v_1 * bb n = d_1`
+            `bb v_2 * bb n = d_2`
+
+            (<b>N.B.</b> the same normal vector)
+        </in>
+            
+        Substitute `bb a + lambda bb n` for `bb v_2`:
+
+        <in>
+            `bb a * bb n + lambda |bb n|^2 = d_2`
+        </in>
+
+        ... and `bb a` for `bb v_1` (giving `d_1 = bb a * bb n`):
+
+        <in>
+            `lambda = (d_2 - d_1)/|bb n|^2`
+        </in>
+
+        The distance between our planes is the distance between our points
+        `bb a` and `bb a + lambda bb n` &nbsp; (i.e., `|lambda bb n|` ):
+
+        <in>
+            `|lambda bb n| = |d_2 - d_1| / |bb n|`
+            &nbsp;
+        </in>
+
+        <h3>Distance between plane and point</h3>
+
+        Similarly, to find the distance between a plane and a <i>point</i> with
+        position vector `bb g`, we may construct a parallel plane containing `bb g`:
+
+        <in>
+            `bb v_1 * bb n = bb g * bb n = h` &nbsp; (plane contructed around `bb g`)
+            `bb v_2 * bb n = d` &nbsp; (another plane)
+        </in>
+
+        The distance between these two planes would then be:
+
+        <in>
+            `|(d-h)/bb n|`
+        </in>
+
+        A special case of this is the distance between the <i>origin</i> and a plane:
+
+        <in>
+            `|d/bb n|`
+        </in>
+
+    </body>
+</html>

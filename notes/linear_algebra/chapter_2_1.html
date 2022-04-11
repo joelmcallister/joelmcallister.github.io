@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Matrices and linear maps</h2>
+        &nbsp;
+        <h3>Linear map (`RR^2 to RR^2`)</h3>
+
+        <in>
+            A linear map (<i>linear transformation</i>) from `RR^2` to `RR^2` is a map &nbsp;`f: RR^2 to RR^2` of the form
+
+            <in>
+                `[(x), (y)] |->  [(ax + by), (cx + dy)]` ,
+            </in>
+
+            which may be represented using the following matrix:
+
+            <in>
+                `[(a, b), (c, d)]` .
+            </in>
+
+            Then, we may define matrix-vector multiplication, such that
+
+            <in>
+                `[(a, b), (c, d)][(x), (y)]`
+            </in>
+
+            is equivalent to `f([(x), (y)])`.
+            &nbsp;
+        </in>
+
+        <h3>Linear map (`bbb F^n to bbb F^m`)</h3>
+
+        <in>
+            A linear map from `bbb F^n` to `bbb F^m` is a map of the shape `[(x_1), (x_2), (vdots), (x_n)] |-> [(y_1), (y_2), (vdots), (y_m)]`,
+
+            where there is a fixed `m xx n` matrix `A = [a_(ij)]` over `bbb F` such that
+
+            <in></in> `y_i = sum_(j=1)^n a_(ij) \ x_j \ \ (i = 1, 2, ..., m)`.
+            &nbsp;
+        </in>
+
+        <h3>Component Notation</h3>
+
+        <in>
+            The following two notational devices may be used to refer to the `(i, j)`<sup>th</sup> component of matrix `A`.
+
+            <in>
+                `i. \ \ \ [A]_(i,j)` &nbsp; (the comma may be omitted if there is no danger of confusion)
+            </in>
+
+            Let `A = [a_(ij)]`
+
+            <in> &nbsp;
+                `ii. \ \ a_(ij)`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Addition and scalar multiplication</h3>
+
+        <in> &nbsp;
+            `[A + B]_(ij) = [A]_(ij) + [B]_(ij)`
+            &nbsp;
+            `[lambda A]_(ij) = lambda [A]_(ij)`
+            &nbsp;
+            Matrices also satisfy the equivalents of the 9 <b>vector properties</b> covered in chapter 1.
+            &nbsp;
+        </in>
+
+        <h3>Matrix multiplication</h3>
+
+        <in> &nbsp;
+            It is very useful to think of matrix multiplication as composition of linear maps.
+
+            <in>
+                `[AB]_(ij) = sum_(k=1)^n [A]_(ik) \ [B]_(kj)`
+            </in>
+
+            The process of matrix multiplication is perhaps best thought of as computing the dot product of the
+            `i` <sup>th</sup> row in `A` with the `j` <sup>th</sup> column in `B`, then storing the result in `[AB]_(ij)`.
+
+            <b>N.B.</b> matrix multiplication is <b>not</b> commutative. (`AB != BA` in general)
+
+            <h4>Properties</h4>
+
+            <in> &nbsp;
+                `A(BC) = (AB)C` &nbsp; (<span class="blue">associativity</span>)
+                `A(B + C) = AB + AC` &nbsp; (first <span class="blue">distributive</span> law)
+                `(A + B)C = AC + BC` &nbsp; (second <span class="blue">distributive</span> law)
+            </in>
+        </in>
+
+        <h3></h3>
+    </body>
+</html>

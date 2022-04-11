@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Vectors in real 3D space</h2>
+        &nbsp;
+        
+        <h3>Properties</h3> 
+
+        <in> &nbsp;
+            `bb x + (bb y + bb z) = (bb x + bb y) + bb z` &nbsp; (<span class="blue">associativity</span> of addition)
+            `bb x + bb y = bb y + bb x` &nbsp; (<span class="blue">commutativity</span> of addition)
+            `bb x + bb 0  = bb 0 + bb x` &nbsp; (existence of a <span class="blue">zero</span> w.r.t. addition)
+            `bb x + (- bb x \ ) = bb 0` &nbsp; (existence of an <span class="blue">inverse</span>)
+
+            `lambda (mu bb x) = (lambda mu) bb x` &nbsp; (<span class="blue">associativity</span> of vector-scalar multiplication)
+            `1 bb x = bb x` &nbsp; (existence of a <span class="blue">one</span>)
+            `0 bb x = bb 0` &nbsp; (existence of a <span class="blue">zero</span> w.r.t. multiplication)
+
+            `(lambda + mu) bb x = lambda bb x + mu bb x` &nbsp; (first <span class="blue">distributive</span> law)
+            `lambda ( bb x + bb y ) = lambda bb x + lambda bb y` &nbsp; (second <span class="blue">distributive</span> law)
+            &nbsp;
+        </in>
+
+        <h3>Length</h3>
+
+        <in>
+            For &nbsp; `x_1, ..., x_n in bbb R`,
+
+            <in></in>`|bb v| = |(x_1), (...), (x_n)| = sqrt(x_1^2 + ... + x_n^2) = sqrt(bb v * bb v)`
+            &nbsp;
+        </in>
+
+        <h3>Angle between two vectors</h3>
+
+        <in> &nbsp;
+            `cos theta = (v * w) / (|v||w|)`.
+            
+            <i>`bb v` and `bb w` are orthogonal</i> &nbsp; `<=>` &nbsp; `bb v * bb w = 0` &nbsp; `<=>` &nbsp; `theta = pi / 2 or bb v = bb 0 or bb w = bb 0`.
+            
+            <h4>Cauchy-Schwartz Inequality:</h4>
+
+            <in>
+                Since `|cos theta| <= 1`,
+
+                <in style="margin-left: 45px"></in>`| bb v * bb w | <= |bb v||bb w|` &nbsp; (with equality iff `bb v` and `bb w` are parallel)
+                &nbsp;
+            </in>
+
+            <h4>Using cross product:</h4>
+                
+            <in> &nbsp;
+                `sin theta = |bb v xx bb w| / (|bb v| |bb w|)`, &nbsp; for non-zero `|bb v|` and `|bb w|` &nbsp;
+
+                <i>(see notes on cross product)</i>
+                &nbsp;
+            </in>
+        </in>
+
+        <h3>Properties of dot product</h3>
+
+        <in> &nbsp;
+            `bb i * bb i = bb j * bb j = bb k * bb k = bb 1`
+            `bb i * bb j = bb i * bb k = bb j * bb k = bb 0`
+            &nbsp;
+            `bb v * bb w = bb w * bb v` <in></in> `AA` vectors `bb v, bb w` &nbsp; (<span class="blue">commutativity</span>)
+            `(lambda bb v) * bb w = lambda (bb v * bb w)` <in></in> `AA` vectors `bb v, bb w` integers `lambda` &nbsp; (scalar-vector <span class="blue">associativity</span>)
+            `bb v * (bb u + bb w) = bb v * bb u + bb v * bb w` <in></in> `AA` vectors `bb u, bb v, bb w` &nbsp; (<span class="blue">distributive</span> law)
+
+            `bb v * bb v = |bb v| ^ 2 >= 0` <in></in> `AA` vectors `bb v`, with equality iff `bb v = bb 0`
+            &nbsp;
+            <b>N.B.</b> You can compute the distance between a <b>point</b> and a <b>line</b> by simply computing the 
+            <in style="margin-left: 38px;"></in>dot product of the two (`bb a xx bb v`) and solving the resulting equation.
+
+        </in>
+    </body>
+</html>

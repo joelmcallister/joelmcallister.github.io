@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>The cross product <span style="font-weight: normal">(vector product)</span></h3>
+
+        <in> &nbsp;
+            `bb v xx bb w = ((a), (b), (c)) xx ((d), (e), (f)) = ((bf - ce), (cd - af), (ae - bd))`
+            &nbsp;
+            `bb v xx bb w` is orthogonal to both `bb v` and `bb w`.
+
+            `bb v xx bb w` is a normal vector of `Pi` &nbsp; `<=>` &nbsp; <i>linearly independent</i> vectors `bb v` and `bb w` are parallel to plane `Pi`
+            &nbsp;
+        </in>
+
+        <h3>Properties of the cross product</h3>
+
+        <in> &nbsp;
+            `bb i xx bb j = bb k`
+            `bb i xx bb k = - bb j`
+            `bb j xx bb k = bb i`
+            &nbsp;
+            `bb v xx bb w = - bb w xx bb v` &nbsp; (non-commutitive)
+            `(lambda bb v) xx bb w = lambda (bb v xx bb w)` &nbsp; (scalar-vector associative law)
+            `bb u xx (bb v + bb w) = (bb u xx bb v) + (bb u xx bb w)` &nbsp; (distributive law)
+
+            `bb a xx (bb b xx bb c) != (bb a xx bb b) xx bb c` &nbsp; ('vector triple products' are non-associative)
+            `bb a * (bb b xx bb c) = (bb a xx bb b) * bb c` &nbsp; ('scalar triple products' are pseudo-associative; <i>see below</i>)
+
+            `bb v xx bb w = bb 0` &nbsp; `=>` &nbsp; `bb v` and `bb w` are parallel
+
+            Therefore, &nbsp; `bb v xx bb v = bb 0`.
+            
+            One useful application of the cross product is finding the area of a parallelogram whose
+            sides are specified by displacement vectors.
+            &nbsp;
+        </in>
+
+        <h4>Angle property</h4>
+
+        <in> &nbsp;
+            `|bb v xx bb w| = |bb v| |bb w| \ sin theta` ,&nbsp; where `theta` is the angle between `bb v` and `bb w`,
+
+            <in></in>`0 <= theta <= pi, \ sin theta >= 0`
+            &nbsp;
+            ( this is derived from the fact that `|bb v xx bb w| ^ 2 + (bb v * bb w) ^ 2 = [ \ |bb v||bb w| \ ]^2` )
+            &nbsp;
+        </in>
+
+        <h3>Alternative equation of a line</h3>
+        
+        <in>
+            In the same way the dot product was used to describe a plane, the cross product can be
+            used to describe a line - except using a direction vector rather than a normal vector.
+
+            `(bb v - bb a) xx bb d = bb 0`
+            `bb v xx bb d = bb a xx bb d`
+
+            Remember that the cross product returns `bb 0` when the two vectors are <b>parallel</b>,
+            whereas the dot product returns `0` when the two vectors are <b>orthogonal</b>.
+
+            So when describing a <b>line</b>, we use the <b>cross product</b> and a <b>direction vector</b>,
+            and when describing a <b>plane</b>, we use the <b>dot product</b> and a <b>normal vector</b>.
+            &nbsp;
+        </in>
+
+        <h3>Box product <span style="font-weight: normal">(scalar triple product)</span></h3>
+
+        <in> &nbsp;
+            The box product is defined as follows:
+
+            `[bb a, bb b, bb c] = bb a * (bb b xx bb c)`
+            
+            Geometrically, this represents the volume of the <b>parallelepiped</b> spanned by the three vectors.
+            The following properties are true of the box product:
+
+            <h4>Cyclic invariance <span style="font-weight: normal">- invariance under cyclic permutation</span></h4>
+            <in> &nbsp;
+                `[bb a, bb b, bb c] = [bb b, bb c, bb a] = [bb c, bb a, bb b]`
+                &nbsp;
+            </in>
+
+            <h4>Negation <span style="font-weight: normal">when any two arguments swapped</span></h4>
+            <in> &nbsp;
+                `[bb a, bb b, bb c] = - [bb b, bb a, bb c] = - [bb c, bb b, bb a] = - [bb a , bb c, bb b]`
+                &nbsp;
+            </in>
+        </in>
+        
+        <h3>Vector triple product</h3>
+
+        <in> &nbsp;
+            The following property is true of the vector triple product:
+
+            `bb a xx (bb b xx bb c) = (bb a * bb c) xx bb b - (bb a * bb b) xx bb c`
+        </in>
+    </body>
+</html>

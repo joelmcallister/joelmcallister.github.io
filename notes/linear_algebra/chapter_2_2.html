@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Identity</h3>
+
+        <in> &nbsp;
+            `I_2 = [(1, 0), (0, 1)]`
+            &nbsp;
+            `I_3 = [(1, 0, 0), (0, 1, 0), (0, 0, 1)]`
+            &nbsp;
+            `I_4 = ...`
+            &nbsp;
+            `IA = AI = A` <in></in> `AA` square matrices `A`
+            &nbsp;
+        </in>
+
+        <h3>Determinant</h3>
+
+        <in> &nbsp;
+            <h4>2 x 2</h4>
+            <in> &nbsp;
+                `det A = ad - bc`
+                &nbsp;
+                <b>N.B.</b> &nbsp; `det(AB) = det A \ det B`
+            </in>
+            &nbsp;
+            <h4>n x n</h4>
+            <in>
+                // <span class="blue">TODO</span>
+                &nbsp;
+            </in>
+        </in>
+
+        <h3>Inverses</h3>
+
+        <in> &nbsp;
+            <h4>2 x 2</h4>
+            <in> &nbsp;
+                `1/(det A) \ [(d, -b), (-c, a)] = 1/(ad - bc) \ [(d, -b), (-c, a)]`
+                &nbsp;
+            </in>
+
+            <h4>n x n</h4>
+            <in>
+                // <span class="blue">TODO</span>
+                &nbsp;
+            </in>
+
+            `A A^(-1) = A^(-1) A = I` <in></in> `AA \ A in { \ M : \ \ det(M) != 0 \ }`
+            &nbsp;
+        </in>
+
+        <h3>Eigenvectors and eigenvalues</h3>
+
+        <in> &nbsp;
+            An <b>eigenvector</b> of a square matrix `A` is any non-zero vector `bb v` such that
+
+            <in>
+                `A bb v = lambda bb v` .
+            </in>
+
+            for some field value `lambda`, which is in turn referred to as the associated <b>eigenvalue</b>.
+
+            The distinctive geometrical characteristic of an eigenvector is that its direction will not change
+            under the corresponding linear transformation - its length will simply be scaled by some associated
+            eigenvalue.
+
+            Developing the above equation, we get
+
+            <in>
+                `A bb v = (lambda I) \ bb v`
+                `A bb v - (lambda I) \ bb v = bb 0`
+                `(A - lambda I) \ bb v = bb 0`
+            </in>
+
+            Since `bb v != bb 0` by definition, we may write
+
+            <in>
+                `det(A - lambda I) = 0`.
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Diagonalization</h3>
+
+        <in> &nbsp;
+            Concentrating for now on the `2 xx 2` case, consider the matrix
+
+            <in>
+                `A = [(3, 1), (0, 2)]`
+            </in>
+
+            which has linearly independent eigenvectors `bb b_1 = [(1), (0)]`, `bb b_2 = [(1), (-1)]` with eigenvalues
+            `3` and `2`, respectively.
+
+            Form a matrix `P` with vectors `bb b_1` and `bb b_2` as the two columns.
+
+            <in>
+                `P = [(1, 1), (0, -1)]`
+            </in>
+
+            We may now use this matrix to change our basis vectors to `bb b_1` and `bb b_2`.
+            (see 3B1B's excellent videos on <a href="https://www.youtube.com/watch?v=P2LTAUO1TdA&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">change of basis</a> and <a href="https://www.youtube.com/watch?v=PFDu9oVAE-g&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">eigenvectors</a>).
+
+            <in>
+                `D = P^(-1)AP`
+            </in>
+
+            Changing our basis vectors to eigenvectors has the advantage that only the diagonal of our matrix
+            will be non-zero, since each basis vector is simply transformed into a <i>scaled version of itself</i>.
+
+            As such, we refer to `D` as our <i>diagonalized</i> matrix.
+
+            By noting that
+
+            <in>
+                <in></in>`D^n = P^(-1)A^nP`
+                &nbsp;
+                `=> A^n = PD^nP^(-1)`
+            </in>
+
+            (this can be proved by noting how adjacent `PP^(-1)` pairs cancel in the expansion of `D^n`)
+            we now have a simple formula for the `n`<sup>th</sup> power of a diagonalizable matrix.
+
+            Notice that
+
+            <in>
+                `P^(-1)AP = [(3, 0), (0, 2)]`.
+            </in>
+
+            Indeed, in general for any diagonalizable `2 xx 2` matrix `A`, and its eigenvector pair `P`,
+
+            <in>
+                `P^(-1)AP = [(lambda, 0), (0, mu)]`
+            </in>
+
+            where `lambda` and `mu` are the eigenvalues corresponding to each respective eigenvector in `P`.
+
+            <b>N.B.</b> eigenvectors corresponding to distinct eigenvalues must be linearly independent.
+        </in>
+    </body>
+</html>
