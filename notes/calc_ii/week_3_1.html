@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Solving complicated D.E.<sup>s</sup> using Taylor series</h3>
+
+        <in>
+            Consider the differential equation
+
+            <in>
+                `x (d^2y)/(dx^2) + (dy)/(dx) + (xy) = 0`
+                &nbsp;
+                `y(0) = 1`
+                &nbsp;
+                `(dy)/(dx) (0) = 0`
+            </in>
+
+            the solution to which cannot be expressed analytically.
+
+            Choose `y` to be a general power series.
+
+            <in>
+                `y = sum_(k=0)^(oo) \ a_k * x^k = a_0 + a_1 * x + a_2 * x^2 + a_3 * x^3 + ... + a_k x^k`
+                &nbsp;
+                <in style="margin-left: 10px"></in>`= 1 + sum_(k=2)^(oo) \ a_k * x^k`
+                &nbsp;
+                `y' = sum_(k=2)^(oo) \ k \ a_k * x^(k-1)`
+                &nbsp;
+                `y^&#x2033; = sum_(k=2)^(oo) \ k(k-1) \ a_k * x^(k-2)`
+                &nbsp;
+                `x y^&#x2033; + y' + xy = sum_(k=2)^(oo) \ (a_(k-2) + k^2 \ a_k) \ x^(k-1)`
+            </in>
+
+            You now have an infinite set of equations, with which to find the coefficients `a_k`
+
+            <in> &nbsp;
+                `a_(k-2) + k^2 \ a_k` &nbsp; &nbsp; &nbsp; `AA \ \ k in NN_(>=2)`
+                &nbsp;
+                `color(lightgrey)( \ \ => \ \ \ y = J_0(x) = sum_(l=0)^(oo) (-1)^l x^(2l) / (2^l * l!)^2 \ \ )`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>L'Hopital's rule</h3>
+
+        <in>
+            <in> &nbsp;
+                `lim_(x->x_0) f(x)/g(x) = lim_(x->x_0) (f'(x))/(g'(x))`
+            </in>
+
+            This can be derived by replacing `f(x)` and `g(x)` with their Taylor series
+            expansions and making the appropriate cancellations.
+        </in>
+    </body>
+</html>

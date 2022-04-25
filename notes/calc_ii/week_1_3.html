@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Necessary condition for convergence</h3>
+
+        <in>
+            Series `S` converges &nbsp; `=>` &nbsp; `lim_(k->oo) b_k = 0`
+            &nbsp;
+            <b>N.B.</b> the converse does not hold.
+
+            i.e. &nbsp; the harmonic series satisfies `lim_(k->oo) b_k = 0`, yet it diverges
+            &nbsp;
+        </in>
+
+        <h3>Absolute convergence</h3>
+
+        <in> &nbsp;
+            `S = sum_(k=0)^(oo) b_k` converges absolutely &nbsp; `<=>` &nbsp; `sum_(k=0)^(oo) |b_k|` converges &nbsp;&nbsp; [ `=> S` converges ]
+            &nbsp;
+        </in>
+
+        <h3>Ratio test for convergence</h3>
+
+        <in> &nbsp;
+            <div class="box" style="padding: 15px;">
+                `r(b) = lim_(k->oo) |b_(k+1)/b_k|`
+                &nbsp;
+
+                `r(b) < 1` &nbsp; `=>` &nbsp; `S` converges absolutely
+                &nbsp;
+                `r(b) > 1` &nbsp; `=>` &nbsp; `S` diverges
+            </div>
+            &nbsp;
+            <b>N.B.</b> if `r(b)` does not exist, or `r(b) = 1`, the ratio test is inconclusive
+            &nbsp;
+        </in>
+
+        <h3>Ratio test applied to power series</h3>
+
+        <in>
+            Given the following definition of a power series
+
+            <in>
+                `S(x) = sum_(k=0)^(oo) \ a_k \ (x-x_0)^k`
+            </in>
+
+            we have that
+
+            <in>
+                `r(b) = |(a_(k+1) \ (x-x_0)^(k+1))/(a_k \ (x-x_0)^k)|`
+                &nbsp;
+                <in style="margin-left: 31px"></in>`= |a_(k+1)/a_k| \ * \ |x-x_0|`
+                &nbsp;
+                <in style="margin-left: 31px"></in>`= r(a) * |x - x_0|`
+            </in>
+
+            Thus, the above conditions may be rewritten for power series as
+
+            <in>
+                `|x-x_0| < 1/(r(a))` &nbsp; `=>` &nbsp; `S` converges absolutely
+                &nbsp;
+                `|x-x_0| > 1/(r(a))` &nbsp; `=>` &nbsp; `S` diverges
+            </in>
+
+            (assuming `r(a)` exists)
+
+            Therefore
+
+            <in>
+                `R = 1/(r(a))`
+            </in>
+
+            gives us the <b>radius of convergence</b> (<b>RoC</b>) of a power series.
+
+            The inequality
+
+            <in>
+                `|x-x_0| < R`
+            </in>
+
+            gives us the <b><i>region</i></b> of convergence, which may be written as the interval
+
+            <in>
+                `(x_0 - R, \ \ x_0 + R)`
+            </in>
+        </in>
+    </body>
+</html>

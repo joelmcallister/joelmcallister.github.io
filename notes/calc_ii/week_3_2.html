@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Representations of curves</h3>
+
+        Consider the curve `C`. There are three ways in which it can be represented.
+
+        <in>
+            <h4>Explicit &nbsp;<span style="font-weight: normal">(`RR^2`)</span></h4>
+            &nbsp;
+            <in>
+                `Gamma_f = { \ (x, y) in RR^2 : \ \ y = f(x) \ }`
+            </in>
+
+            For many such graphs, the curve can be represented by a single equation,
+            such that
+
+            <in>
+                `C = Gamma_f`
+            </in>
+
+            (e.g., <b>line</b>, <b>polynomial</b>)
+
+            Other curves must be represented by two seperate functions.
+            Take for example a <b>circle</b>.
+
+            <in>
+                `C_(text(TOP)) = Gamma_(f_(text(top)))`
+                &nbsp;
+                `C_(text(BOTTOM)) = Gamma_(f_(text(bottom)))`
+            </in>
+
+            Some curves do not lend themselves to explicit representation - their
+            equations would be incredibly complex (e.g., <b>spiral</b>, <b>squiggle</b>)
+
+            <h4>Implicit &nbsp;<span style="font-weight: normal">(`RR^2`)</span></h4>
+
+            <in> &nbsp;
+                `Sigma_g = { \ \ (x, \ y) in RR^2 : \ \ g \ (x, \ y) = 0 \ \ }`
+            </in>
+
+            with solution set
+
+            <in>
+                `C = Sigma_g`
+            </in>
+            &nbsp;
+            <h4>Parametric &nbsp;<span style="font-weight: normal">(`RR^n`)</span></h4>
+
+            <in> &nbsp;
+                `C = { \ \ \ \ (x, y) in RR^2 : \ \ { (\ x = f(t)), (\ y = g(t))  :} \ \ , \ \ text(with) \ \  t in (a, b), \ \ \  a, b in RR \ \ \ \ }`
+            </in>
+        </in>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Preliminary remark</h3>
+
+        <in> &nbsp;
+            `|x| < 1 \ => \ lim_(n->oo) x^n = 0`
+            &nbsp;
+        </in>
+        
+        <h3>Series</h3>
+
+        A series `S` is an infinite sum, defined as
+
+        <in>
+            `S = sum_(k=0)^(oo) b_k`
+        </in>
+        &nbsp;
+        <h3>Convergence</h3>
+
+        A partial sum of a series is the sum of the first `n` terms of that series
+
+        <in>
+            `S_n = sum_(k=0)^(n-1) b_k`
+            &nbsp;
+            `S` converges to finite value `v` &nbsp; `<=>` &nbsp; `lim_(n->oo) S_n = v`
+            &nbsp;
+            `S` does not converge to a finite value &nbsp; `<=>` &nbsp; `lim_(n->oo) S_n` does not exist
+            &nbsp;
+        </in>
+
+        <h4>Example: geometric series</h4>
+
+        The following trick can be used to find the value to which a series converges.
+
+        <in> &nbsp;
+            `S(x) = sum_(k=0)^(oo) x^k`
+            `=> S_n(x) = sum_(k=0)^(n-1) x^k`
+            &nbsp;
+            `=> S_n(x) * (1-x)`
+            &nbsp;
+            <in>`= (1 + x + x^2 + x^3 + ... + x^(n-1)) (1 - x)`</in>
+            &nbsp;
+            <in>`= 1 - x^n`</in>
+            &nbsp;
+            `=> S_n(x) = (1 - x^n)/(1 - x)` &nbsp; (`x != 1`)
+            &nbsp;
+            <div class="box">
+                <h4>Case `|x| < 1` </h4>
+                &nbsp;
+                <in>
+                    `lim_(n->oo) S_n(x) = (1 - lim_(n->oo) x^n) / (1 - x) = 1/(1-x)`
+                    &nbsp;
+                    `=> \ S(x)` converges to `1/(1-x)`.
+                    &nbsp;
+                </in>
+
+                <h4>Case `|x| >= 1`</h4>
+                &nbsp;
+                <in>
+                    `S` diverges.
+                </in>
+            </div>
+            &nbsp;
+        </in>
+
+        <h4>Example: integrating geometric series</h4>
+
+        <in> &nbsp;
+            `int_0^y S_n(x) \ dx \ = \ int_0^y (sum_(k=0)^(n-1) x^k) \ dx`
+        </in>
+
+        We may now attempt term-by-term integration.
+        <b>N.B.</b> that this will only work if all of the resulting integrals converge.
+
+        <in>
+            <in style="margin-left: 106px"></in>`= sum_(k=0)^(n-1) int_0^y x^k \ dx \ = \ sum_(k=0)^(n-1) y^(k+1)/(k+1)`.
+        </in>
+
+        Let `l = k+1`.
+
+        <in>
+            `int_0^y S_n(x) \ dx \  = \ sum_(l=1)^(n) y^l / l`.
+        </in>
+
+        We may consider this as the partial sum `T_n(y)` of the sum `T(y)`
+
+        <in> &nbsp;
+            `=> T_n(y) = sum_(l=1)^(n) y^l / l \ = \ int_0^y (1-x^n)/(1-x) \ dx = -ln(1-y) - int_0^y x^n/(1-x) \ dx`
+        </in>
+
+        It may be shown that if &nbsp; `|y| < 1`, &nbsp; &nbsp; `int_0^y x^n//(1-x) \ dx -> 0` &nbsp; as &nbsp; `x -> oo`. Therefore,
+
+        <in>
+            `|y| < 1 \ => \ T(y)` &nbsp; converges to &nbsp; `-ln(1-y)`.
+            &nbsp;
+        </in>
+
+        <h3>A series for natural log</h3>
+
+        Using the above result, and setting `x = -y`, we may write
+
+        <in>
+            `ln(1+x) = - sum_(l=1)^(oo) (-x)^l/l \ = x - x^2/2 + x^3/3 - x^4/4 + ...`
+            &nbsp;
+        </in>
+
+        <b>N.B.</b> if you plug in the value `x = -1`, you get the harmonic series
+        <in></in> (or rather, the harmonic series multiplied by `-1`). This follows,
+        <in></in> since the harmonic series is divergent, and `log(0)` is undefined.
+
+        <h3>The harmonic series</h3>
+
+        I mentioned above that the harmonic series diverges. Here is the proof of that
+
+        <in>
+            <in style="margin-left: 31px"></in>`1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + 1/8 + ...`
+            &nbsp;
+            `> \ 1 + 1/2 + 1/4 + 1/4 + 1/8 + 1/8 + 1/8 + 1/8 + ...`
+            &nbsp;
+            `= \ 1 + 1/2 + 1/2` <in style="margin-left: 40px"></in> `+ \ 1/2` <in style="margin-left: 120px"></in>  `+ \ ...`
+            &nbsp;
+            `-> oo`
+        </in>
+
+
+    </body>
+</html>

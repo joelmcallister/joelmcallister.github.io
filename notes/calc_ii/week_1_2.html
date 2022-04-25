@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Power series</h3>
+
+        A geometric series is an example of a power series
+
+        <in>
+            `S(x) = sum_(k=0)^(oo) x^k`, which converges to `1/(1+x)`
+        </in>
+
+        The formula for `ln(1 + x)`, as derived on the previous page,
+        is also an example of a power series
+
+        <in>
+            `T(x) = -sum_(k=1)^(oo) (-x)^k/k`, which converges to `ln(1+x)`
+        </in>
+
+        Power series can be written as follows
+
+        <in>
+            `S(x) = sum_(k=0)^(oo) a_k \ x_k`.
+        </in>
+
+        ... or more generally
+
+        <in>
+            `S(x) = sum_(k=0)^(oo) a_k \ (x - x_0)^k`, &nbsp; for constant `x_0`
+        </in>
+
+        Each term `b_k` is the product of a coefficient `a_k` and the `k`<sup>th</sup> power of `x`.
+
+        Therefore, the partial sum `S_n(x)` of a power series is a `n`<sup>th</sup> &nbsp;(or `n-1`<sup>th</sup>)
+        degree polynomial in `x`.
+
+        <h3>Common power series operations</h3>
+
+        <in>
+            1. Substitution
+            2. Addition / subtraction
+            3. Term-wise differentiation
+            4. Term-wise integration
+
+            <b>N.B.</b> multiplying and subtracting power series is difficult and unlikely to be the
+            <in></in> optimal solution.
+        </in>
+    </body>
+</html>

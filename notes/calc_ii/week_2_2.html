@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Taylor polynomials</h3>
+
+        <in>
+            The coefficients of a Taylor series do not always arise in a patterned way.
+
+            In this case, the best we can do is compute the first `n` terms of the series,
+            producing what is referred to as a Taylor polynomial.
+
+            <in>
+                `P_n(x) = f(x_0) + sum_(k=1)^n (f^((k))(x_0))/(k!) (x - x_0)^k`
+            </in>
+            &nbsp;
+            <b>Case</b>: `n=1`
+
+            <in>
+                The "<b>linearisation</b>" of `f` about `x_0`.
+
+                <in>
+                    `P_1(x) = f(x_0) + f'(x_0) * (x - x_0)`
+                </in>
+
+                This equation represents the <b>tangent line</b> to the function at `x_0`.
+
+                This is because `P_1(x_0) = f(x_0)` and `P_1'(x_0)  = f'(x_0)`,
+                by the definition of a Taylor series.
+                &nbsp;
+            </in>
+
+            <b>Case</b>: `n=2`
+            
+            <in>
+                The parabola which best fits the function at `x_0`.
+
+                <in>
+                    `P_1(x) = f(x_0) + f'(x_0) * (x - x_0) + 1/2 f^&#x2033;(x_0) * (x - x_0)^2`
+                </in>
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Taylor's theorem</h3>
+
+        <in> &nbsp;
+            `f(x) = sum_(k=0)^(oo) \ (f^((k)) (x_0) )/(k!) \ (x - x_0)^k`
+            &nbsp;
+            <in style="margin-left: 35px"></in>`= sum_(k=0)^n \ \ ... \ \ + \ sum_(k=n+1)^(oo) \ (f^((k)) (x_0) )/(k!) \ (x - x_0)^k`
+            &nbsp;
+            <in style="margin-left: 35px"></in>`= P_n(x) + R_(n+1)(x)`
+
+            where
+
+            <in>
+                `R_(n+1)(x) = sum_(k=n+1)^(oo) \ (f^((k)) (x_0) )/(k!) \ (x - x_0)^k`
+                &nbsp;
+            </in>
+
+            <h4>Taylor's theorem</h4>
+
+            <in> &nbsp;
+                `EE \ epsilon in RR_(>0), \ M in RR_(>0) \ :`
+                &nbsp;
+                <in></in>`|x - x_0| < epsilon \ \ \ => \ \ \ |R_(n+1)(x)| <= M * (x-x_0)^(n+1)`
+                
+
+                In other words, as `x` tends to `x_0`, `R_(n+1)` tends to `0` <b>at least as fast</b>
+                as `(x - x_0)^n`.
+
+                This can be expressed in big-O notation, as such:
+
+                <in>
+                    `R_(n+1)(x) = O(\ (x-x_0)^(n+1)\ )`
+                </in>
+
+                One may then write, for example
+
+                <in>
+                    `e^x = 1 + x + O(x^2)`
+                </in>
+
+                meaning that the error involved in the approximation of `e^x` with `1 + x`
+                is of the order `x^2`.
+
+                As is customary with big-O notation, superfluous constants and coefficients
+                may be removed.
+            </in>
+        </in>
+    </body>
+</html>
