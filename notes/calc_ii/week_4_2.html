@@ -44,19 +44,19 @@
                 <in style="margin-left: 88px"></in>`= (text(change of speed)) + (text(change of direction))`
             </in>
 
-            If we parameterise our equation in terms of arc length `s`, the relationship
-            between `bb a` and `bb T` becomes much simpler (since `v(s) = 1 \ \ \ AA s`).
-
-            <in>
-                `bb a(s) = (d bb T)/(ds)`
-            </in>
-
             Also note that the tangent vector is always orthogonal to its derivative w.r.t. `t`.
 
             <in>
                 `d/(dt) (bb T * bb T) = 2 (bb T * (d bb T) / (dt)) = 0,` &nbsp; &nbsp; since `|bb T| = 1`
                 &nbsp;
                 `=> bb T _|_ (d bb T)/(dt)`
+            </in>
+
+            If we parameterise our equation in terms of arc length `s`, the relationship
+            between `bb a` and `bb T` becomes much simpler (since `v(s) = 1 \ \ \ AA s`).
+
+            <in>
+                `bb a(s) = (d bb T)/(ds)`
             </in>
             &nbsp;
         </in>
@@ -74,20 +74,54 @@
 
             where `K` represents to the magnitude of `bb a` and `bb N` represents its direction.
             
+            <b>N.B.</b> the above defintion is only applicable when working in a parameterisation
+            <in></in> w.r.t. the arc length `s`.
+
             `bb N` is commonly referred to as the <b>unit normal vector</b>, since `bb T` is
             orthogonal to its derivative w.r.t. `s`, and thus `bb a(s)` and `bb N(s)` are normal to
             the curve at point `P: (x, y)`.
 
             <in>
                 `bb N _|_ bb T`
+                &nbsp;
             </in>
+
+            `K` is known as as the <b>curvature</b> at point `P: (x, y)`.
+
+            <b>N.B.</b> for a circle of radius `R`, &nbsp; &nbsp; `bb N = -bb r/R`, &nbsp; and so the unit normal vector
+            <in></in> `bb N` always points towards the center of the circle.
             &nbsp;
         </in>
 
         <h3>Tangent and osculation</h3>
 
         <in> &nbsp;
-            `C'` is tangential to `C` &nbsp; &nbsp; &nbsp; `<=>` &nbsp; &nbsp; &nbsp; `bb r(s_0) = bb r'(s_0')` &nbsp; and &nbsp; `[(d bb r)/(ds)]_(s_0) = [(d bb r')/(ds')]_(s_0')`
+            `C'` is tangential to `C` at `P` &nbsp; &nbsp; &nbsp; `<=>` &nbsp; &nbsp; &nbsp; `bb r(s_0) = bb r'(s_0')` &nbsp; &nbsp; and &nbsp; &nbsp; `[(d bb r)/(ds)]_(s_0) = [(d bb r')/(ds')]_(s_0')`
+            &nbsp;
+            `C'` osculates `C` at `P` &nbsp; &nbsp; &nbsp; `<=>` &nbsp; &nbsp; &nbsp; `C'` is tangential to `C` at `P` &nbsp; &nbsp; and &nbsp; &nbsp; `[(d^2 bb r)/(ds^2)]_(s_0) = [(d^2 bb r')/(ds'^2)]_(s_0')`
+            &nbsp;
+            <in style="margin-left: 181px"></in>`<=>` &nbsp; &nbsp; &nbsp; `C'` is tangential to `C` at `P` &nbsp; &nbsp; and &nbsp; &nbsp; `K(s_0) = K'(s_0')` &nbsp; &nbsp; and &nbsp; &nbsp; `bb N(s_0) = bb N'(s_0')`
+            &nbsp;
+            <in style="margin-left: 500px"></in>(" same `bb N` and `K` at `P` ")
+            
+            <b>N.B.</b> &nbsp; to "osculate" means to kiss.
+            &nbsp;
+            The tangent to a curve is a line, whereas a curve is osculated by a circle,
+            known as the "osculating circle".
+
+            The curvature of `C` is inversely proportional to the radius of `D`, the circle
+            which it osculates
+
+            <in>
+                `K(s) = 1/(rho(s))`
+                &nbsp;
+            </in>
+            <b>N.B.</b> &nbsp; `rho` is known as the <b>radius of curvature</b>.
+
+            The unit normal vector `bb N` points towards the center of `D`.
+            &nbsp;
         </in>
+
+        <h3>`K` and `bb N` without parameterisation w.r.t. `s`</h3>
     </body>
 </html>
