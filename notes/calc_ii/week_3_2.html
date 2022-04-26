@@ -81,6 +81,97 @@
 
             <in> &nbsp;
                 `C = { \ \ \ \ (x, y) in RR^2 : \ \ { (\ x = f(t)), (\ y = g(t))  :} \ \ , \ \ text(with) \ \  t in (a, b), \ \ \  a, b in RR \ \ \ \ }`
+                &nbsp;
+                <h4>Circle</h4>
+
+                <in> &nbsp;
+                    `x = R \ \ cos(t)`
+                    `y = R \ \ sin(t)`
+                    &nbsp;
+                    <b>N.B.</b> &nbsp; &nbsp; `x^2 + y^2 = R`
+
+                    Minimum range: &nbsp; &nbsp; `0 <= t <= pi`
+                    &nbsp;
+                </in>
+
+                <h4>Line segment <span style="font-weight: normal">(version 1)</span></h4>
+
+                <in> &nbsp;
+                    `x = R \ \ cos^2(t)`
+                    `y = R \ \ sin^2(t)`
+                    &nbsp;
+                    <b>N.B.</b> &nbsp; &nbsp; `x + y = R`
+
+                    Minimum range: &nbsp; &nbsp; `0 <= t <= pi/2`
+                    &nbsp;
+                </in>
+
+                <h4>Line segment <span style="font-weight: normal">(version 2)</span></h4>
+
+                <in> &nbsp;
+                    `x = R \ \ (1-t)`
+                    `y = R \ \ t`
+                    &nbsp;
+                    <b>N.B.</b> &nbsp; &nbsp; `x + y = R`
+
+                    Range: &nbsp; &nbsp; `0 <= t <= 1`
+                    &nbsp;
+                </in>
+
+                <b>N.B.</b> for the first representation of a line segment, different values of `t` oscillate
+                <in></in> up and down the curve. With the second representation, the domain of `t`
+                <in></in> determines the range of the line segment.
+
+                <h4>Hyperbola</h4>
+
+                <in> &nbsp;
+                    `x = sinh(t)`
+                    `y = cosh(t)`
+                    &nbsp;
+                    <b>N.B.</b> &nbsp; &nbsp; `y^2 - x^2 = 1`
+
+                    Range: &nbsp; &nbsp; `-oo <= t <= +oo`
+                </in>
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Converting from explicit to parametric</h3>
+
+        <in>
+            Consider the curve `y = f(x)`.
+
+            Simply
+
+            <in>
+                `x = t`
+                `y = f(t)`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Polar representation</h3>
+
+        <in>
+            To calculate the polar representation of a spiral, note that
+
+            <in>
+                `x = r cos theta`
+                `y = r sin theta`
+            </in>
+
+            By defining `r` to be a function of `theta`, we may write
+
+            <in>
+                `r(theta) = a theta + b`
+                &nbsp;
+                <b>N.B.</b> Setting `a = 0` and `b = R` gives us a circle.
+            </in>
+
+            OR
+
+            <in>
+                `r(theta) = a \ * \ exp \ (\ b theta \ )`
             </in>
         </in>
     </body>

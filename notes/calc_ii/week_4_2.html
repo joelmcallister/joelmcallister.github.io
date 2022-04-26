@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Acceleration</h3>
+
+        <in>
+            Since `bb v = v bb T`, we may note the following about acceleration
+
+            <in>
+                `bb a(t) = (d bbv)/(dt) = (dv)/(dt) bb T + v (d bb T)/(dt)`
+                &nbsp;
+                <in style="margin-left: 88px"></in>`= (text(change of speed)) + (text(change of direction))`
+            </in>
+
+            If we parameterise our equation in terms of arc length `s`, the relationship
+            between `bb a` and `bb T` becomes much simpler (since `v(s) = 1 \ \ \ AA s`).
+
+            <in>
+                `bb a(s) = (d bb T)/(ds)`
+            </in>
+
+            Also note that the tangent vector is always orthogonal to its derivative w.r.t. `t`.
+
+            <in>
+                `d/(dt) (bb T * bb T) = 2 (bb T * (d bb T) / (dt)) = 0,` &nbsp; &nbsp; since `|bb T| = 1`
+                &nbsp;
+                `=> bb T _|_ (d bb T)/(dt)`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Curvature and unit normal vector</h3>
+
+        <in>
+            We can thus define
+
+            <in>
+                `K(s) = |bb a(s)|`
+                &nbsp;
+                `bb N(s) = (bb a(s)) / (|bb a(s)|) = (bb a(s)) / (K(s))`
+            </in>
+
+            where `K` represents to the magnitude of `bb a` and `bb N` represents its direction.
+            
+            `bb N` is commonly referred to as the <b>unit normal vector</b>, since `bb T` is
+            orthogonal to its derivative w.r.t. `s`, and thus `bb a(s)` and `bb N(s)` are normal to
+            the curve at point `P: (x, y)`.
+
+            <in>
+                `bb N _|_ bb T`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Tangent and osculation</h3>
+
+        <in> &nbsp;
+            `C'` is tangential to `C` &nbsp; &nbsp; &nbsp; `<=>` &nbsp; &nbsp; &nbsp; `bb r(s_0) = bb r'(s_0')` &nbsp; and &nbsp; `[(d bb r)/(ds)]_(s_0) = [(d bb r')/(ds')]_(s_0')`
+        </in>
+    </body>
+</html>

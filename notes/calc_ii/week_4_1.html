@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+
+            .normal {
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Vector</h3>
+
+        <in>
+            We will be using the following notation for vectors:
+
+            <in> &nbsp;
+                `bb r(t) = x(t) \ bb i + y(t) \ bb j`
+                &nbsp;
+                <in></in>`= (\ x(t), \ \ y(t) \ )`
+            </in>
+
+            The derivative of a vector is defined as follows:
+
+            <in>
+                `(d bb r)/(dt) = lim_(Delta t -> 0) (bb r(t + Delta t) - bb r(t))/(Delta t)`
+                &nbsp;
+                <in style="margin-left:27px"></in>`= (dx)/(dt) bb i + (dy)/(dt) bb j`
+                &nbsp;
+                <in style="margin-left:27px"></in>`= (\ (dx)/(dt), \ \ (dy)/(dt) \ )`
+            </in>
+
+            precisely as with scalars.
+
+            When `t` represents time, `(d bb r)/(dt)` is a vector representing the <b>velocity</b>
+            at time `t`. This also happens to be <b>tangent</b> to the curve at that point
+            (the point `P: (x, y)`).
+
+            <in>
+                `bb v(t) = (d bb r)/(dt)`
+                &nbsp;
+                `v(t) = |bb v(t)|`
+                &nbsp;
+                `bb T(t) = (bb v(t))/(v(t))` &nbsp; &nbsp; [ (unit) tangent vector ]
+                &nbsp;
+                `s(t) = int_(t_0)^(t_1) \ v(t) \ dt` &nbsp; &nbsp; [ arc length (distance travelled) ]
+                &nbsp;
+
+                <h4>dr/ds</h4>
+
+                <in> &nbsp;
+                    <in></in>`v(t) = (ds)/(dt) = |(d bb r)/(dt)|`
+                    &nbsp;
+                    `=> 1 = |(d bb r)/(dt) div (ds)/(dt)|`
+                    &nbsp;
+                    &nbsp;
+                    `=> v = |(d bb r)/(ds)| = 1.`
+                </in>
+                &nbsp;
+            </in>
+        </in>
+
+        <h3>Parameterisation in terms of `s`, arc length</h3>
+
+        <in>
+            We can replace our `t` parameter with any other variable to get a new
+            set of parametric equations representing the same curve.
+
+            It is sometimes useful to use the arc length `s` as our "new `t` parameter".
+            To do this we can simply rearrange `s` for `t`, and substitue these values into
+            `x(t)` and `y(t)` to create a new set of parametric euqations `x(s)` and `x(t)`.
+
+            One useful byproduct of doing this is that, since `|d bb r // ds| = 1`, we have that
+
+            <in>
+                `bb T(s) = (d bb r) / (ds)`.
+            </in>
+
+            Notice that no normalisation is required!
+        </in>
+    </body>
+</html>
