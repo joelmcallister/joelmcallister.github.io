@@ -47,8 +47,18 @@
 
         <in>
             // &nbsp; <b class="blue">TODO</b> &nbsp; (maybe) &nbsp; <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7c08c790-4469-430c-910a-ac9b00c703e5">motivating example</a>
-            &nbsp;
-            `dz = (del z)/(del x) dx + (del z)/(del y) dy` &nbsp; &nbsp; &nbsp; (<a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=44f402f0-1fb9-4874-b12d-ac9b00c6529e">see more</a>)
+
+            Here is a useful theoretical definition
+
+            <in>
+                `d/dt [ \ \ f(\ x_0 + t, \ \ y_0\ ) \ \ ]_(\ t=0)`
+            </in>
+
+            Note the following property
+
+            <in>
+                `dz = (del z)/(del x) dx + (del z)/(del y) dy` &nbsp; &nbsp; &nbsp; (<a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=44f402f0-1fb9-4874-b12d-ac9b00c6529e">see more</a>; <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbccb544-e18c-47d9-a9ac-ac9d0090aa24">notation</a>)
+            </in>
 
             The partial derivative of `z` w.r.t. `x` is obtained by treating the other variable as a constant,
             then calculating the derivative exactly as one would with a total derivative.
@@ -58,6 +68,56 @@
                 &nbsp;
                 `(del z)/(del y) = ` &nbsp; derivative of z w.r.t. y, keeping x fixed
             </in>
+
+            // &nbsp; <b class="blue">TODO</b> &nbsp; example
+            &nbsp;         
+        </in>
+
+        <h3>Clairaut's theorem</h3>
+
+        <in> &nbsp;
+            <in>
+                `f_(xy)(x, y) = f_(yx)(x, y)`
+            </in>
+
+            in any point where both `f_(xy)` and `f_(yx)` are continuous.
+            &nbsp;
+        </in>
+
+        <h3>Directional derivative</h3>
+
+        <in>
+            Let `bb hat n` be a unit vector (the `hat("hat")` indicates it is a unit vector).
+
+            <in>
+                `bb hat n = (n_x, n_y),` &nbsp; &nbsp; &nbsp; `sqrt(n_x^2 + n_y^2) = 1`
+            </in>
+
+            Then the <b>directional derivative</b> of `f` is
+
+            <in>
+                `(del f)/(del n)(x_0, y_0) = d/dt[\ f(x_0 + t n_x, \ y_0 + t n_y)\ ]_(t=0)`
+            </in>
+
+            Given that
+
+            <in>
+                `dz = (del z)/(del x) dx + (del z)/(del y) dy` &nbsp; &nbsp; and &nbsp; &nbsp; `dx = dt * n_x, \ \ \ dy = dt * n_y`
+            </in>
+
+            we have that 
+
+            <in>
+                <in style="margin-left: 33px"></in>`dz = ((del f)/(del x) n_x + (del f)/(del y) n_y) \ dt`
+                &nbsp;
+                <div class="box">
+                    `=> (del f)/(del n) = (del f)/(del x) n_x + (del f)/(del y) n_y`
+                </div>
+            </in>
+
+            This is our formula to calculate any given directional derivative, in the
+            direction of a given unit vector. Note, `bb hat n` must be a <i>unit</i> vector - that is,
+            `bb hat n` must be normalised (`|bb hat n| = 1`).
         </in>
     </body>
 </html>
