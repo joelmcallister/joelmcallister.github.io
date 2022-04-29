@@ -33,10 +33,24 @@
         </style>
     </head>
     <body>
-        <h3>Gradient</h3>
+        <h2 style="font-size: 1.25em">Constrained optimisation</h2>
+
+        // &nbsp; <b style="color: blue">TODO</b> &nbsp; motivating examples and methods
+        
+        <h3>Direct method</h3>
 
         <in>
-            `"grad" f = `Del f` = ((del f)/(del x), (del f)/(del y))`
+            1.  Represent the constraint explicitly or parametrically.
+            2.  Substitute the explicit/parametric representation of the constraint into 
+                `f(x, y)`, giving a univariate function of `x` or `t`
+            3.  Calculate the stationary points!
+            &nbsp;
+        </in>
+
+        <h3>Lagrange multiplier</h3>
+
+        <in> &nbsp;
+            `grad f = lambda grad g`
         </in>
     </body>
 </html>

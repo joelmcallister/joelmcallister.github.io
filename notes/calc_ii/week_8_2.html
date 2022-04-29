@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Taylor series for `f(x, y)`</h3>
+
+        <in>
+            The definition of the Taylor series for `f(x, y)` is similar to its
+            univariate equivalent
+
+            <in>
+                `f(x, y) = S_f \ (x, y) = sum_(k=0)^(oo) sum_(k=0)^(oo) \ a_(kl) (x-x_0)^k \ (y-y_0)^l`
+
+                where `f(x, y)` and `S_f \ (x, y)` and all their partial derivatives coincide at `(x_0, y_0)`.
+            </in>
+
+            The coefficient `a_(kl)` is defined as follows
+
+            <in>
+                `a_(kl) = 1/(k!l!) \ (del^(k+l)/(dx^kdy^l)[\ f(x_0, y_0)\ ])`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Taylor polynomials for `f(x, y)`</h3>
+
+        <in>
+            In practice, we will not be using the above doubly infinite sums. Calculating their convergence criteria is
+            prohibitively difficult. Instead we will be using Taylor polynomials, specifically those terms for which `k + l`
+            is at most `2`.
+
+            <in>
+                `color(black)(P_2(x, y) =) f(x_0, y_0) + ((del f)/(del x))_(x_0, y_0)(x-x_0) + ((del f)/(del y))_(x_0, y_0)(y-y_0)`
+                &nbsp;
+                <in style="margin-left: 165px; color: lightgrey">`+ 1/2 ((del^2 f)/(del^2 x))_(x_0, y_0)(x-x_0)^2 + ((del^2 f)/(del x del y))_(x_0, y_0)(x-x_0)(y-y_0) + 1/2 ((del^2 f)/(del^2 y))_(x_0, y_0)(y-y_0)^2`</in>
+            </in>
+
+            More concisely, we may write
+
+            <in>
+                `P_2(x, y) = f(x_0, y_0) + \ \ \ \ \ \ bb m^T grad f(x_0, y_0)`
+                &nbsp;
+                <in style="margin-left: 165px"></in>` + 1/2 \ \ \ bb m^T\ H_f\ (x_0, y_0) \ bb m \ ,`
+                &nbsp;
+                with `bb m = [(x-x_0), (y-y_0)]\ .`
+            </in>
+        </in>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Rectangular multivariate intergral</h3>
+
+        <in>
+            Here is a genereal interval, defined over the range `D = [a, b] xx [c, d]`
+            
+            <in> &nbsp;
+                `int_a^b int_c^d f(x, y) dy dx = int_a^b (int_c^d f(x, y) dy) dx`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>General `D`</h3>
+
+        <in> &nbsp;
+            <in>
+                `D = {\ (x, y): \ \ a <= x <= b; \ \ g_1(x) <= y <= g_2(x) \ ("w.l.o.g.") \ }`
+                &nbsp;
+                `int_a^b int_(g_1(x))^(g_2(x)) f(x, y) \ dy \ dx`
+            </in>
+        </in>
+    </body>
+</html>

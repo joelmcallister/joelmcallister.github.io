@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Parametric equation as a contour</h3>
+
+        <in>
+            Consider the curve &nbsp; &nbsp; `C = { \ (x, y): \ \ g(x, y) = c \ }`
+            &nbsp;
+            Then there is a vector `bb r` such that
+            
+            <in>
+                `bb r = (x, y) = (\ x(t), y(t)\ )`
+                &nbsp;
+                `=> AA \ t: \ \ \ z(t) = g(x(t), y(t)) = c`
+            </in>
+
+            It may be <a style="color: black" href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=efde747c-3ec8-44e7-a376-ac9d01034a2a">derived</a> that
+
+            <in>
+                `grad g * bb T = 0`
+            </in>
+
+            In other words, &nbsp; `bb T` &nbsp; is orthogonal to &nbsp; `grad g` &nbsp; everywhere on `C`.
+            Therefore, `grad g` is normal to the curve at `P(x, y)`.
+
+            We can thus use `grad g` to determine our unit normal vector `bb N`.
+        </in>
+
+        // &nbsp; &nbsp; <b style="color: blue">TODO</b> &nbsp; &nbsp; add the definitions below for `bb N` and `K` to week 4 notes
+
+        <h3>Obtaining `bb N` from `grad g`</h3>
+
+        <in> &nbsp;
+            <in>
+                `bb N = +-(grad g)/|grad g| = +- 1/|grad g| \ [(g_x), (g_y)]`
+                &nbsp;
+            </in>
+
+            <b>N.B.</b> &nbsp; the sign must be chosen so that `bb N` points towards the center of curvature.
+            &nbsp;
+        </in>
+
+        <h3>The Hessian <span style="font-weight: normal">- obtaining `K` from `grad g`</span></h3>
+
+        <in>
+            The Hessian is a `2 xx 2` matrix whose elements are the second order partial derivatives of `g(x, y)`.
+
+            <in>
+                `H_g = [(g_(x x), g_(xy)), (g_(yx), g_(yy))]`
+                &nbsp;
+                <b>N.B.</b> &nbsp; &nbsp; `g_(xy) = g_(yx)`
+            </in>
+
+            Switching to column vectors, we may write
+
+            <in>
+                `bb T = [(T_x), (T_y)] = +- 1/|grad g| \ [(-g_y), (g_x)]`
+                &nbsp;
+                `=> bb T^T = [T_x, T_y]`
+            </in>
+
+            Then, we may define `K` as follows
+
+            <in>
+                `K = 1/|grad g| \ |\ bb T^T \ H_g \ bb T \ |`
+            </in>
+        </in>
+    </body>
+</html>

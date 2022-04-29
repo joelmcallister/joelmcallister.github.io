@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Stationary points of `f(x, y)`</h3>
+
+        <in>
+            A local minimum (maximum) is a point `(x_0, y_0)` such that
+            for all points `(x, y)` in an <b>open disk</b> around `(x_0, y_0)`
+
+            <in> &nbsp;
+                `f(x, y) >= \ (<=) \ f(x_0, x_y).`
+            </in>
+
+            To be a local minimum (maximum), `(x_0, y_0)` must be a stationary
+            point of `f(x,y)`
+
+            <in>
+                `(x_0, y_0)` is a stationary point &nbsp; &nbsp; `<=>` &nbsp; &nbsp; `AA \ bb hat n \ : \ \ \ [ (del f)/(del n) ]_[\ (x_0, y_0)] = 0` &nbsp; &nbsp; `<=>` &nbsp; &nbsp; `grad f(x_0, y_0) = bb 0`
+                &nbsp;
+            </in>
+        </in>
+
+        <h3>Local minima (maxima) of `f(x, y)`</h3>
+
+        <in>
+            Using our quadratic Taylor polynomal `P_2(x, y)`, it may be <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa52b754-f11c-416f-a0da-aca000df983b" style="color: black">derived</a> theoretical
+
+            <in>
+                `(x_0, y_0)` is a local minimum (maximum) of `f(x, y)` &nbsp; &nbsp; `lArr` &nbsp; &nbsp; `AA \ m != 0 \ : \ \ \ bb m^T \ H_f \ (x_0,y_0) \ bb m \ > \ (<)\  0,` &nbsp; &nbsp; with `bb m = [(x - x_0), (y - y_0)]`
+                &nbsp;
+            </in>
+            
+            <b>N.B.</b> &nbsp; this is known as <b>quadratic form</b>
+            &nbsp;
+            <h4>Diagonal case</h4>
+
+            Consider the case when the Hessian is diagonal
+
+            <in>
+                `H_f \ (x_0, y_0) = [(a, 0), (0, b)]` &nbsp; &nbsp; `=>` &nbsp; &nbsp; `bb m^T \ H_f \ (x_0,y_0) \ bb m = a \ bb m_x^2 + b \ bb m_y^2`
+            </in>
+
+            Thus, we get a local minimum (maximum) when
+
+            <in>
+                `a = (del^2 f)/(del x^2) > \ (<) \ 0` &nbsp; &nbsp; and &nbsp; &nbsp; `b = (del^2 f)/(del y^2) > \ (<) \ 0\ .`
+            </in>
+
+            In addition
+
+            <in>
+                `a < 0` &nbsp; and &nbsp; `b > 0` &nbsp; or &nbsp; `a > 0` &nbsp; and &nbsp; `b < 0` &nbsp; &nbsp; &nbsp; &nbsp; `=>` &nbsp; &nbsp; &nbsp; &nbsp; `(x_0, y_0)` is a saddle point
+                &nbsp;
+                `a = 0` &nbsp; or &nbsp; `b = 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; test inconclusive
+                &nbsp;
+            </in>
+
+            <h4>General case</h4>
+
+            The following criteria may be <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a6752753-185c-4e4f-9dc9-aca000df98a1">derived</a> in the general case
+
+            <in>
+                `det H_f < 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; saddle point
+
+                `det H_f = 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; inconclusive
+
+
+                `det H_f > 0` and `b > (<) \ 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; local minimum (maximum)
+            </in>
+        </in>
+    </body>
+</html>

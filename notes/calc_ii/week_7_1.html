@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: blue;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Directional derivative</h3>
+
+        <in>
+            Let `bb hat n` be a unit vector (the `hat("hat")` indicates it is a unit vector).
+
+            <in>
+                `bb hat n = (n_x, n_y),` &nbsp; &nbsp; &nbsp; `sqrt(n_x^2 + n_y^2) = 1`
+            </in>
+
+            Then the <b>directional derivative</b> of `f` is
+
+            <in>
+                `(del f)/(del n)(x_0, y_0) = d/dt[\ f(x_0 + t n_x, \ y_0 + t n_y)\ ]_(t=0)`
+            </in>
+
+            Given that
+
+            <in>
+                `dz = (del z)/(del x) dx + (del z)/(del y) dy` &nbsp; &nbsp; and &nbsp; &nbsp; `dx = dt \ n_x, \ \ \ dy = dt \ n_y`
+            </in>
+
+            we have that 
+
+            <in>
+                <in style="margin-left: 33px"></in>`dz = ((del f)/(del x) n_x + (del f)/(del y) n_y) \ dt`
+                &nbsp;
+                <div class="box">
+                    `=> (del f)/(del n) = (del f)/(del x) n_x + (del f)/(del y) n_y`
+                </div>
+            </in>
+
+            This is our formula to calculate any given directional derivative, in the
+            direction of a given unit vector. Note, `bb hat n` must be a <i>unit</i> vector - that is,
+            `bb hat n` must be normalised (`|bb hat n| = 1`).
+            &nbsp;
+        </in>
+
+        <h3>Gradient</h3>
+
+        <in>
+            The gradient of `f` is a vector, defined as follows
+
+            <in>
+                `"grad" \ \ f = grad f = ((del f)/(del x), (del f)/(del y)) = (f_x, f_y)`
+            </in>
+
+            The following property is true of the gradient
+            
+            <in>
+                <div class="box">
+                    `(del f)/(del n) = grad f \ * \ bb hat n`
+                </div>
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Direction of steepest ascent</h3>
+
+        <in>
+            The direction of steepest ascent of `f(x, y)` at `(x_0, y_0)` is the direction of `bb hat n` for which
+            `(del f)/(del n)` is maximal.
+
+            <in>
+                `bb hat n_f \ : \ AA \ bb hat n \ \ \ (del f)/(del n) <= (del f)/(del n_f)`
+                &nbsp;
+                <div class="box">
+                    `\ bb hat n_f = (grad f)/|grad f|` &nbsp; &nbsp; &nbsp; and &nbsp; &nbsp; &nbsp; `(del f)/(del n_f) = |grad f|`
+                </div>
+                &nbsp;
+                (`=> bb hat n_f = grad f // (del f)/(del n_f)` )
+            </in>
+
+            Remarkably, this theorem says that the direction of steepest ascent can be obtained
+            by simply normalising the gradient. In addition, the directional derivative of the
+            direction of steepest ascent is simply the modulus of this gradient (<a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=268993ca-186e-4724-9e4a-ac9d00b434b2">proof</a>).
+
+        </in>
+    </body>
+</html>
