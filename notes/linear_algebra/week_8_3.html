@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+
+            .normal {
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>General formula for the determinant</h3>
+
+        <in>
+            The following is a general formula for the determinant of an `n xx n` matrix `A`.
+
+            <in>
+                `det \ A = sum_(alpha in S_n) \ sg(alpha) \ \ prod_(k=1)^n \ a_(kalpha(k))`
+                &nbsp;
+            </in>
+
+            <h4>Case: `n=2`</h4>
+
+            <in> &nbsp;
+                `S_2 = { e, (\ 1 \ \ 2 \ ) }`
+                &nbsp;
+                `det A = sg(e)\ a_(11)a_(22) + sg((\ 1 \ \ 2 \ )) \ a_(12)a_(21)`
+                &nbsp;
+                <in style="margin-left: 44px"></in>`= a_(11)a_(22) - a_(12)a_(21)`
+                &nbsp;
+            </in>
+
+            <h4>Case: `n=3`</h4>
+
+            <in>
+                // &nbsp; <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=51a95651-1020-4504-a74a-ade500a1233e">:) not typing this out</a>
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Determinant in `3 xx 3`</h3>
+
+        <in>
+            Let &nbsp; `bb a = [(a_1), (a_2), (a_3)],` &nbsp; `bb b = [(b_1), (b_2), (b_3)],` &nbsp; `bb c = [(c_1), (c_2), (c_3)]`
+
+            Then the following relationship exists between the scalar product and
+            the determinant of a `3 xx 3` matrix
+                
+            <in>
+                `det [(a_1, a_2, a_3), (b_1, b_2, b_3), (c_1, c_2, c_3)] = [bb a, bb b, bb c].`
+            </in>
+            
+            However, in practice the easiest way to calculate the determinant is through
+            <b>expansion along the first row</b>
+
+            <in> &nbsp;
+                `det [(a_(11), a_(12), a_(13)), (a_(21), a_(22), a_(23)), (a_(31), a_(32), a_(33))] = a_(11) det[(a_(22), a_(23)), (a_(32), a_(33))] - a_(12) det[(a_(21), a_(23)), (a_(31), a_(33))] + a_(13) det[(a_(21), a_(22)), (a_(31), a_(32))]`
+            </in>
+
+            One could also expand along the second or third row, or even along the columns if one so desired.
+
+            This idea is represented by this formula for an `n xx n` matrix `A`
+
+            <in> &nbsp;
+                `det A = sum_(j=1)^n a_(ij) \ A_(ij)`
+            </in>
+
+            where `A_(ij)` (referred to as the <b>cofactor</b>) is the determinant of the matrix obtained by removing the
+            `i`<sup>th</sup> row and `j`<sup>th</sup> column from our matrix (with its sign determined by the parity of `i+j`; even `=>` `+`,
+            odd `=>` `-`).
+
+            <b>N.B.</b> &nbsp; the matrix from which the cofactor is obtained is referred to as the <b>adjugate</b> (denoted `"adj"(A)`).
+        </in>
+    </body>
+</html>

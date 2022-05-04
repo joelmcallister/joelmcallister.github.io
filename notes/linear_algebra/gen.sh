@@ -1,3 +1,3 @@
 #!/bin/bash
 
-tree -H "." -I "gen.sh" > index.html
+tree -H "." -I "gen.sh|index.html" > index.html

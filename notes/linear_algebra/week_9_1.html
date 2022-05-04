@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+
+            .normal {
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Properties of determinants <span class="normal">(`n xx n`)</span></h3>
+
+        <in> &nbsp;
+            The following properties hold of determinants of `n xx n` matrices.
+            
+            <in>
+                `det (AB) = det(A) \ det(B)`
+                &nbsp;
+                `det (A^T) = det(A)`
+                &nbsp;
+                &nbsp;
+                <b>Multiplying</b> any row or column of a matrix by a constant
+                also multiplies the determinant by that same constant.
+                &nbsp;
+                If a given row or column `i_0` in a matrix may be <b>written as the sum</b>
+                of  two other row/column vectors `bb a + bb b`, then the determinant of that 
+                matrix may be written as the sum of the determinants of two matrices,
+                where `i_0` has been replaced with `bb a` and `bb b`, respectively.
+                &nbsp;
+                &nbsp;
+                If any row or column of a square matrix is `bb 0`, then the determinant
+                is `0`.
+                &nbsp;
+                If <b>any two</b> rows or any two columns of a square matrix are <b>equal</b>, then the 
+                determinant is `0`.
+                &nbsp;
+                &nbsp;
+                The determinant is <b>unchanged</b> if a <b>multiple</b> of one row is <b>added to another</b>, or
+                a multiple of one column is added to another.
+
+                The determinant switches sign if two rows or two columns switch place.
+
+            </in>
+
+            This last property is really a special case of the following
+            <in>
+                If two rows or two columns of a matrix are permuted using the permutation `sigma`,
+                then the value of the determinant is multiplied by `"sg"(sigma)`.
+                &nbsp;
+
+            </in>
+
+            <b>N.B.</b> &nbsp; one can expand along any row/column of an `n xx n` matrix to compute its determinant,
+            <in></in> &nbsp; as in the `3 xx 3` case.
+            &nbsp;
+        </in>
+
+        <h3>Inverse of a matrix <span class="normal">(`n xx n`)</span></h3>
+
+        <in>
+            The inverse of an `n xx n` matrix is defined as follows
+
+            <in>
+                `A^(-1) = ("adj"(A))/(det(A))`
+                &nbsp;
+            </in>
+
+            <b>N.B.</b> &nbsp; as in the `2 xx 2` case, `A^(-1)` is only defined when `det(A) != 0`.
+        </in>
+    </body>
+</html>

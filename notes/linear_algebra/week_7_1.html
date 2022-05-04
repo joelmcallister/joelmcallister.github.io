@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Linear recurrence relations</h3>
+
+        <in>
+            Consider the linear recurrence relation defined by
+
+            <in>
+                `x_0 = 1`
+                &nbsp;
+                `x_1 = 1`
+                &nbsp;
+                `x_n = x_(n-1) + 2x_(n-2)`
+            </in>
+
+            We may equivalently write this as
+
+            <in>
+                `[(x_(n-1)), (x_n)] = [(0, 1), (2, 1)][(x_(n-2)), (x_(n-1))]`
+                &nbsp;
+                <in style="margin-left: 67px;"></in>`= A[(x_(n-2)), (x_(n-1))]`
+                &nbsp;
+                <in style="margin-left: 67px;"></in>`= A^n[(x_0), (x_1)]`
+                &nbsp;
+                <in style="margin-left: 67px;"></in>`= A^n[(1), (1)],` &nbsp; &nbsp; &nbsp; &nbsp; where `A = [(0, 1), (2, 1)].`
+            </in>
+
+            This, of course lends itself to diagonalization, so that we might easily
+            compute the `n`<sup>th</sup> power of matrix `A`.
+
+            <in>
+                <div style="color: lightgrey">
+                    `det(A - lambda I) = -(lambda + 1)(lambda - 2) = 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; `lambda_1 = -1, \ \ \ lambda_2 = 2`
+                    
+                    This yields the respective eigenvectors &nbsp; `[(1), (-1)], \ [(1), (2)]` &nbsp; &nbsp; `=>` &nbsp; &nbsp; `P = [(1, 1), (-1, 2)].`
+                    &nbsp;
+                </div>
+                `=>` &nbsp; &nbsp; `A^n = PD^nP^(-1)` &nbsp; &nbsp; (which may be easily expanded)
+            </in>
+
+            A seperate but related use for diagonalisation can be found in the <a href="https://rhul.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2493fbad-5090-453f-a2b7-ade500a15e6d">city vs country problem</a>.
+            &nbsp;
+        </in>
+
+        <h3>Coupled differential equations</h3>
+
+        <in>
+            The following differential equations may be solved using a specific change of variables.
+
+            <in>
+                `(dx)/(dt) = 5x + 3y`
+                &nbsp;
+                `(dy)/(dt) = -6x - 4y`
+                &nbsp;
+                &nbsp;
+                `((x^'), (y^')) = [(5, 3), (-6, -4)][(x),(y)] = A[(x),(y)],` &nbsp; &nbsp; for matrix `A = [(5, 3), (-6, -4)]`
+                &nbsp;
+            </in>
+
+            `A` may now be diagonalized, yielding
+
+            <in>
+                `P = [(1, 1), (-1, -2)]` &nbsp; &nbsp; and &nbsp; &nbsp; `D = [(2, 0), (0, -1)]`
+            </in>
+
+            We now implement a <b>change of variables</b>
+
+            <in> &nbsp;
+                <in style="margin-left: 53px;"></in>`[(x), (y)] = P\ [(X), (Y)]`
+                &nbsp;
+                `=>` &nbsp; &nbsp; `[(X), (Y)] = P^(-1)[(x), (y)]`
+                &nbsp;
+                `=>` &nbsp; &nbsp; `[(X^'), (Y^')] = P^(-1)[(x^'), (y^')]`
+                &nbsp;
+                <in style="margin-left: 105px; color: lightgrey">`= P^(-1)A[(x), (y)] = P^(-1)AP[(X), (Y)]`</in>
+                &nbsp;
+                <div class="box" style="padding: 8px">
+                    `=>` &nbsp; &nbsp; `[(X^'), (Y^')] = D\ [(X), (Y)] = [(2X), (-Y)]`
+                </div>
+                &nbsp;
+                `=>` &nbsp; &nbsp; `X^' = 2X` &nbsp; &nbsp; and &nbsp; &nbsp; `Y^' = -Y`
+                &nbsp;
+                `=>` &nbsp; &nbsp; `X = Ae^(2t)` &nbsp; &nbsp; and &nbsp; &nbsp; `Y = Be^(-t)`
+                &nbsp;
+                `=>` &nbsp; &nbsp; `x = Ae^(2t) + Be^(-t)` &nbsp; &nbsp; and &nbsp; &nbsp; `y = -Ae^(2t) - Be^(-t)`
+                &nbsp;
+            </in>
+        </in>
+
+        <h3>The Cayley-Hamilton Theorem</h3>
+
+        <in>
+            The Cayley-Hamilton theorem states that any square matrix `A` satisfies its own characteristic equation.
+            &nbsp;
+            (i.e. the characteristic equation `lambda^2 - 2lambda + 1` is satisfied by `lambda = A => A^2 - 2A + I = O`).
+        </in>
+    </body>
+</html>

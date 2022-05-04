@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Rotation matrices</h3>
+
+        <in>
+            The matrix `[(cos theta, -sin theta), (sin theta, cos theta)]` is called a <i>rotation matrix</i>.
+            &nbsp;
+            <b>N.B.</b> &nbsp; rotation matrix multiplication is <b>commutative</b>,
+            <in></in> &nbsp; has a determinant of `1`, and has no real eigenvalues
+            <in></in> &nbsp; (though it does have complex ones).
+            &nbsp;
+        </in>
+
+        <h3>Reflection matrix</h3>
+
+        <in>
+            The matrix `[(cos 2delta, sin 2delta), (sin 2delta, -cos 2delta)]` is called a <i>reflection matrix</i>.
+            
+            where `delta` is the (anticlockwise) angle between the x-axis and the mirror line.
+
+            An intuition for this formula is the fact that reflection in this mirror line is
+            equivalent to reflection in the x-axis, followed by a rotation of angle `2delta`.
+
+            <b>N.B.</b> &nbsp; a reflection matrix has a determinant of `-1`, and always has `1`
+            <in></in> &nbsp; and `-1` as eigenvalues.
+            &nbsp;
+        </in>
+
+        <h3>Characteristic polynomial of `P^(-1)AP`</h3>
+
+        <in>
+            The characteristic polynomial of `D = P^(-1)AP` is the same as the
+            characteristic polynomial of `A`.
+
+            <in>
+                `det(P^(-1)AP - lambda I) = det(A - lambda I)`
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Undiagonalizable matrices</h3>
+
+        <in>
+            Some matrices cannot be diagonalized.
+        </in>
+    </body>
+</html>
