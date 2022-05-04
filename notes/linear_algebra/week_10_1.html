@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+
+            .normal {
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Vector space</h3>
+
+        <in> &nbsp;
+            <a href="https://en.wikipedia.org/wiki/Vector_space#Definition_and_basic_properties">Click here for the definition of a vector space.</a>
+
+            One can check that a set `W` is a vector space by checking both
+
+            <in>
+                1. &nbsp; &nbsp; that it is closed under vector addition and scalar multiplication
+                2. &nbsp; &nbsp; that it satisfies the eight axioms of a vector space.
+            </in>
+
+            One can check that `\ V: \ V sube W` is a subspace (and thus a vector space) by checking both
+
+            <in>
+                1. &nbsp; &nbsp; that it is closed under vector addition and scalar multiplication
+                2. &nbsp; &nbsp; `bb 0 in V` &nbsp; &nbsp; (<b>N.B.</b> &nbsp; `V` is non-empty `=>` `bb 0 in V`)
+            </in>
+            &nbsp;
+        </in>
+
+        <h3>Linear independence, spanning, dimension</h3>
+
+        <in> &nbsp;
+            <h4>Linear independence</h4>
+
+            A finite list `L = bb v_1, ..., bb v_m` is linearly independent iff
+            
+            <in>
+                `lambda_1 bb v_1 + ... + lambda_m bb v_m = bb 0` &nbsp; &nbsp; `=>` &nbsp; &nbsp; `lambda_1 = lambda_2 = ... = lambda_m = 0`
+                &nbsp;
+            </in>
+
+            <h4>Spanning</h4>
+
+            <in> &nbsp;
+                `S` <b>spans</b> `V` if every element of `V` can be written as a linear combination of elements of `S`.
+                
+                If `V` has a finite spanning set then we say `V` is <b>finite-dimensional</b>, and the dimension of `V` is the
+                number of elements in a basis for `V`.
+
+                If finite spanning set `S` spans `V`, and `S` forms a linearly independent list, then `S` is a <b>basis</b> for `V`.
+
+
+            </in>
+        </in>
+    </body>
+</html>
