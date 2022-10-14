@@ -1,0 +1,79 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			white-space: pre;
+		}
+
+		body::nth-lin
+
+		a {
+			color: blue;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 0;
+			display: inline-block;
+		}
+
+		in {
+			display: inline-block;
+			margin-left: 30px;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+		.box {
+			border-style: solid;
+			border-width: 1px;
+			padding: 4px;
+		}
+	</style>
+</head>
+<body>
+
+<h3>Periodic functions</h3>
+
+	A function `f` is `n`-periodic  `<=>`  `f(x + n) = f(x)` `AA x in RR`.
+
+	`f(x)` is defined `AA x in [m, -m]`  and  `f` is `2m` periodic  `=>`  `f` is defined `AA x in RR`.
+
+Sinusoids are the quintessential example of a periodic function. In fact,
+
+	`f(x) = sum_(n=1)^N (\ a_n cos(nx) + b_n sin(nx)\ )`  `=>`  `f` is `2pi`-periodic.
+
+for `N in NN`. (note that `n in NN` - intuitively, this property would not hold for non-integer coefficients of `x`)
+
+<h3>Trigonometric series and Fourier series</h3>
+
+A series of the form
+
+	`1/2 a_0 + sum_(n=1)^(oo) (\ a_n cos(nx) + b_n sin(nx)\ )`
+
+is said to be a <b>trigonometric series</b>.
+
+`AA x` for which a trigonometric series <i>converges</i>, we may define a function
+
+	`f(x) := \ \ 1/2 a_0 + sum_(n=1)^(oo) (\ a_n cos(nx) + b_n sin(nx)\ )`
+
+Such a trigonometric series is said to be the <b>Fourier series</b> (representation) of the function `f`.
+
+If a Fourier series converges some `x in RR`, then it also converges for `x+2pi k, \ \ k in ZZ`   (<span style="color: red; cursor: pointer; text-decoration:underline">proof</span>).
+
+<h3>Kronecker delta</h3>
+
+	[[ TBC ]]
+
+<h3>Euler-Fourier formulae</h3>
+
+	[[ TBC ]]
+<script>
+	document.body.innerHTML = document.body.innerHTML.trim()
+</script>
+
+</body>
+</html>

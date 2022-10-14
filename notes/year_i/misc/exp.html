@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: pre-line;
+            }
+
+            a {
+                color: black;
+            }
+
+            h1, h2, h3, h4 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            in {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+            .box {
+                border-style: solid;
+                border-width: 1px;
+                padding: 4px;
+            }
+
+            .normal {
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        `16^x + 20^x = 25^x`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `5^x4^x = (5^x)^2 - (4^x)^2`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `ab = a^2 - b^2,` where `a = 5^x` and `b = 4^x` &nbsp; `=>` &nbsp; `b = 4^(log_5 a) = 4^((log_4 a)/(log_4 5)) = a^(1/(log_4 5)) = a^c,` where `c = 1/(log_4 5)`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `aa^c = a^2 - a^(2c)` &nbsp; `=>` &nbsp; `a^(c-1) = 1 - a^(2(c-1))`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `d^2 + d - 1 = 0,` &nbsp; &nbsp; where &nbsp; `d = a^(c-1) = (5^x)^(1/(log_4 5) - 1).`
+        &nbsp;
+        &nbsp;
+        `1/(log_4 5) - 1 = (1-log_4 5)/(log_4 5) = (log_4 4 - log_4 5)/(log_4 5) = log_4 {:4/5:} / (log_4 5) = log_5 {:4/5:}`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `d = (5^x)^(log_5 {:4/5:}) = (4/5)^x.`
+        &nbsp;
+        &nbsp;
+        Since `d^2 + d - 1 = 0,` &nbsp; `d = -1/2 (1+- sqrt(5)) = -varphi or 1/varphi,` &nbsp; &nbsp; where &nbsp; `varphi = 1/2(1+sqrt(5))` &nbsp; (golden ratio)
+        &nbsp;
+        `d > 0` &nbsp; `=>` &nbsp; `d = 1/varphi`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `(4/5)^x = 1/varphi` &nbsp; `=>` &nbsp; `(5/4)^x = varphi`
+        &nbsp;
+        `=>` &nbsp; &nbsp; `x = log_(5/4) varphi = (ln varphi)/ln{:5/4:}.`
+    </body>
+</html>

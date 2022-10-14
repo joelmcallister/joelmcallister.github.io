@@ -1,0 +1,102 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			white-space: pre;
+		}
+
+		a {
+			color: blue;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 0;
+			display: inline-block;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+		.box {
+			border-style: solid;
+			border-width: 1px;
+			padding: 4px;
+		}
+	</style>
+</head>
+<body>
+
+<a href="#" style="color: unset"><h3>Eigenfunction Eigenvalue Problem</h3></a>
+
+Consider the following ODE
+
+	`y^&#8243; + lambda y = 0`,      for some constant  `lambda in RR`.
+
+An equivalence may be observed between this ODE and the eigenvalue equation from linear algebra
+
+	`A bb x = lambda bb x`,
+
+where the vector `bb x` is replaced with the (scalar) function `y`, and the matrix `A`
+is replaced with the operator `-d^2/(dx^2)`.
+
+(<b>N.B.</b> recall that both matrix multiplication and differentiation are linear transformations)
+
+Thus, given certain boundary conditions, we may determine the eigenvalues and corresponding
+<i>eigenfunctions</i> (since `y` is a function, not a vector) for the given ODE.
+
+First though, we should determine the general solution to this equation, which can be split into three
+cases.
+
+	1)	Let  `lambda = -alpha^2`      `alpha in RR \ \\ \ {0}`   (`=> \ lambda < 0` ).
+
+		Then the general solution becomes
+
+			`y_(-)(x) = Acosh(alpha x) + Bsinh(alpha x)`,      for `A`, `B` arbitrary constants.
+			
+			(<b>N.B.</b> we may restrict to `alpha > 0` since `-alpha` yields the same `lambda` value
+				 and the altered sign of `sinh` may be absorbed into the arbitrary constant)
+
+	2)	Let `lambda = 0`.
+
+		Then we have
+
+			 `(d^2y)/(dx^2) = 0`
+
+		`=>`  `y_0(x) = cx + d,`      for arbitrary constants `c` and `d`.
+
+	3)	Let `lambda = beta^2`      `beta in RR \ \\ \ {0}`   (`=> \ lambda > 0` ).
+
+		Then the general solution becomes
+
+			`y_(+)(x) = Ecos(beta x) + Fsin(beta x)`,      for `E`, `F` arbitrary constants.
+
+			(<b>N.B.</b> once again, we may restrict `beta` to the positive reals)
+
+	The imposition of boundary conditions will fix the values of the arbitrary constants.
+
+<b>N.B.</b> The <i>trivial</i> solution `lambda = 0` is not an eigenvalue, since an eigenvalue
+	must be non-zero.
+
+	In addition, as is the case with eigenvectors, one 
+
+See the <a href="./assets/MT2720.week1-5.pdf">lecture notes</a> for examples.
+
+<b>N.B.</b> Example 1.7 from the lecture notes has eigenvalues
+
+		`lambda_n = n^2`,    `n in ZZ_(>=0)`
+
+	with corresponding eigenfunctions given by
+
+		`y_n(x) = { ("   " 1,"if  " n=0), ({{: (sinx), (cosx) :}}, "if  " n != 0) :}`
+
+	where the bracket notation 
+
+<script>
+	document.body.innerHTML = document.body.innerHTML.trim()
+</script>
+
+</body>
+</html>
