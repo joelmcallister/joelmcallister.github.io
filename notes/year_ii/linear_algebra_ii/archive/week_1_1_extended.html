@@ -1,0 +1,97 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			white-space: pre;
+		}
+
+		div {
+			display: inline-block;
+		}
+
+		a {
+			color: blue;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 0;
+			display: inline-block;
+		}
+
+		in {
+			display: inline-block;
+			margin-left: 30px;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+		.grey {
+			color: grey;
+		}
+
+		.box {
+			border-style: solid;
+			border-width: 1px;
+			padding: 4px 8px;
+		}
+	</style>
+</head>
+<body>
+
+<h3>Determinants</h3>
+
+Recall from Linear Algebra I, that the determinant can be defined formally using the following equation
+
+	`det \ A = sum_(alpha in S_n) \ sg(alpha) \ \ prod_(k=1)^n \ a_(k, alpha(k))`,
+
+	where `S_n` is the symmetric group on `n`, and `sg(alpha)` is the parity of the permutation `alpha`.
+
+Since this formulation is quite unwieldy, we will use the more efficient one provided below. In the
+previous module, we were given an equally gruelling definition of the inverse of a matrix as the
+<i>adjugate</i> divided by the determinant
+
+	`A^(-1) = "adj"(A))//(det(A)`.
+
+<h4>Cofactors and minors</h4>
+
+We may form an `(n-1) xx (n-1)` matrix  `tilde A_(ij)`  (referred to as a <b>minor</b> of `A`) by removing
+the `i` <sup><i>th</i></sup> row and `j` <sup><i>th</i></sup> column of our matrix.
+
+The <b>cofactors</b> of our matrix are signed determinants of the corresponding minors
+
+	`c_(ij) = (-1)^(i+j) det(tilde A_(ij)) = {(\ \ \ det(tilde A_(ij)), if i + j " is even"), (-det(tilde A_(ij)), if i + j " is odd"):}`
+
+The determinant may be more usefully defined in terms of these cofactors
+
+	<div class="box">
+		`det(A) = sum_(j=1)^n c_(ij) \ a_(ij)`       `i in NN <= n`,
+		where `a_(ij)` is `(ij)` <sup><i>th</i></sup> value in `A`.
+	</div>	
+
+<b>N.B.</b> This provides us with `n` different formulae for `det(A)`, since there are `n` rows in the matrix.
+
+This is often referred to as the <b>Laplace expansion</b> (or <b>expansion along the `n`<sup>th</sup> row</b>) of `det(A)`, and provides a much more
+computationally efficient way of computing the the determinant  -  `O(n^3)` versus `O(n!)`.
+
+For a `3 xx 3` matrix, this equates to the following computation
+
+	`det [(a_(11), a_(12), a_(13)), (a_(21), a_(22), a_(23)), (a_(31), a_(32), a_(33))] = a_(11) det[(a_(22), a_(23)), (a_(32), a_(33))] - a_(12) det[(a_(21), a_(23)), (a_(31), a_(33))] + a_(13) det[(a_(21), a_(22)), (a_(31), a_(32))]`  .
+
+Finally, recall that the following properties hold for determinants
+
+	`det(AB) = det(A) \ det(B)`
+
+	`A` is invertible   `<=>`   `det(A) != 0`    `<=>`   `EE \ B in RR^(n xx n) \ \ : \ \ AB = I`
+<script>
+	// removes whitespace
+	document.body.innerHTML = document.body.innerHTML.trim()
+	Array.from(document.getElementsByTagName("div"))
+		 .forEach(e => e.innerHTML = e.innerHTML.trim().split(/\r?\n/).map(row => row.trim()).join('\n'))
+</script>
+
+</body>
+</html>

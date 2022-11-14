@@ -46,7 +46,24 @@
 </head>
 <body>
 
+<h2>AI Betting Project</h2>
 
+<h3>Valuebetting</h3>
+
+The `"ev"` for each bet `"ev"_b` is given by the following formula:
+
+    `"ev"_b = p_t (o_b + 1) - 1`
+
+where `p_t` is the true probability (as given by our AI model), and `o_b`
+are the odds provided for the given selection.
+
+<b>N.B.</b>  `p_t = 1/o_t` and `p_b = 1/o_b`
+
+         where `o_t` are the true odds, and `p_b` is the <i>normalised</i>
+         implied probability from the bookmaker/exchange.
+
+         Note that since odds are usually marked up by the bookie/exchange,
+         they <i>must</i> be normalised to get the genuine implied probability.
 
 <script>
 	document.body.innerHTML = document.body.innerHTML.trim()

@@ -11,8 +11,8 @@
 			display: inline-block;
 		}
 
-		a, a:visited {
-			color: black;
+		a {
+			color: blue;
 		}
 
 		h1, h2, h3, h4 {
@@ -23,10 +23,6 @@
 		in {
 			display: inline-block;
 			margin-left: 30px;
-		}
-
-		.black {
-			color: black;
 		}
 
 		.blue {
@@ -46,7 +42,19 @@
 </head>
 <body>
 
+<h3>Useful sin/cos addition formulae</h3>
 
+The formula
+
+    `2cos alpha sin beta = sin(alpha + beta) - sin (alpha - beta)`
+
+yields the following result that is useful for Fourier series calculations:
+
+    `2 \ sinx \ cosnx = sin \ (n+1)x - sin \ (n-1)x`
+
+and
+
+    `2 \ cosx \ sinnx = sin \ (n+1)x + sin \ (n-1)x`.
 
 <script>
 	document.body.innerHTML = document.body.innerHTML.trim()

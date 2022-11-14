@@ -82,7 +82,7 @@ cases.
 
 	In addition, as is the case with eigenvectors, one 
 
-See the <a href="./assets/MT2720.week1-5.pdf">lecture notes</a> for examples.
+See the <a href="./assets/MT2720.week1.pdf">lecture notes</a> for examples.
 
 <b>N.B.</b> Example 1.7 from the lecture notes has eigenvalues
 
@@ -92,7 +92,17 @@ See the <a href="./assets/MT2720.week1-5.pdf">lecture notes</a> for examples.
 
 		`y_n(x) = { ("   " 1,"if  " n=0), ({{: (sinx), (cosx) :}}, "if  " n != 0) :}`
 
-	where the bracket notation 
+	where the bracket notation indicates that two linearly independent eigenfunctions
+	<b>span</b> the <b>two-dimensional eigenspace</b> corresponding to the eigenvalue `lambda_n`, and
+	that `lambda_n` has <b>multiplicity two</b>.
+	
+	In other words, a non-trivial linear combination of the functions shown is also an eigenfunction.
+
+	For eigenvalue `lambda = 0` :
+
+		`y(x) = Esin(nx) + Fcos(nx)`,    `n in NN`,
+
+		for arbitrary constants `E, F` .
 
 <script>
 	document.body.innerHTML = document.body.innerHTML.trim()

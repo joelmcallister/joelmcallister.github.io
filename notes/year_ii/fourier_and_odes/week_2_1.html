@@ -7,10 +7,12 @@
 			white-space: pre;
 		}
 
-		body::nth-lin
+		div {
+			display: inline-block;
+		}
 
-		a {
-			color: blue;
+		a, a:visited {
+			color: black;
 		}
 
 		h1, h2, h3, h4 {
@@ -21,6 +23,10 @@
 		in {
 			display: inline-block;
 			margin-left: 30px;
+		}
+
+		.black {
+			color: black;
 		}
 
 		.blue {
@@ -38,15 +44,17 @@
 
 <h3>Periodic functions</h3>
 
-	A function `f` is `n`-periodic  `<=>`  `f(x + n) = f(x)` `AA x in RR`.
+	A function `f` is `2m`-periodic  `<=>`  `f(x + 2m) = f(x)` `AA x in RR`.
 
 	`f(x)` is defined `AA x in [m, -m]`  and  `f` is `2m` periodic  `=>`  `f` is defined `AA x in RR`.
 
-Sinusoids are the quintessential example of a periodic function. In fact,
+Sinusoids are the quintessential example of a periodic function. In fact, any expression of the form
 
-	`f(x) = sum_(n=1)^N (\ a_n cos(nx) + b_n sin(nx)\ )`  `=>`  `f` is `2pi`-periodic.
+	`sum_(n in ZZ) (\ a_n cos(nx) + b_n sin(nx)\ )`
 
-for `N in NN`. (note that `n in NN` - intuitively, this property would not hold for non-integer coefficients of `x`)
+is `2pi`-periodic (note that `n in ZZ`; rational, non-integer coefficients of `x` would also yield periodic
+functions, just not of period `2pi`). This makes sense intuitively since the sum of two `2m`-periodic
+functions will also be `2m`-periodic.
 
 <h3>Trigonometric series and Fourier series</h3>
 
@@ -56,21 +64,44 @@ A series of the form
 
 is said to be a <b>trigonometric series</b>.
 
-`AA x` for which a trigonometric series <i>converges</i>, we may define a function
+`AA x` for which a trigonometric series <i>converges</i>, it defines a function
 
 	`f(x) := \ \ 1/2 a_0 + sum_(n=1)^(oo) (\ a_n cos(nx) + b_n sin(nx)\ )`
 
-Such a trigonometric series is said to be the <b>Fourier series</b> (representation) of the function `f`.
+Such a trigonometric series is said to be the <b>Fourier series</b> for `f`.
 
-If a Fourier series converges some `x in RR`, then it also converges for `x+2pi k, \ \ k in ZZ`   (<span style="color: red; cursor: pointer; text-decoration:underline">proof</span>).
+For any given Fourier series, given the above formulation,
+	
+	`f(x) = f(x + 2pik), \ \ \ k in ZZ`,     `AA x in S`,
+
+where `S sube RR` is the set of values of `x` for which the trigonometric series converges.
 
 <h3>Kronecker delta</h3>
 
-	[[ TBC ]]
+	`delta_(mn) = {(1,if m = n), (0, if m != n):}, \ \ \ \ AA m,n in ZZ`
+
+This is essentially the mathematical equivalent an equality operator (`"=="`).
+Using this operator, we may derive the following results:
+
+	`int_(-pi)^pi sin(mx) \ sin(nx) \ dx = pi delta(mn)`
+
+	`int_(-pi)^pi cos(mx) \ cos(nx) \ dx = pi delta(mn)`
+
+	`int_(-pi)^pi sin(mx) \ cos(nx) \ dx = 0`
+
+	(notice the parity of each integrand)
+
+<b>N.B.</b> be sure not to confuse this with the <a href="https://en.wikipedia.org/wiki/Dirac_delta_function">Dirac delta</a>,
+	which is often used to define the <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a>.
+
+The Kronecker delta...
 
 <h3>Euler-Fourier formulae</h3>
 
 	[[ TBC ]]
+
+<a href="./assets/MT2720.week2.pdf">Lecture notes</a>
+
 <script>
 	document.body.innerHTML = document.body.innerHTML.trim()
 </script>

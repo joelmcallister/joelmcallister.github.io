@@ -11,7 +11,7 @@
 			display: inline-block;
 		}
 
-		a, a:visited {
+		a {
 			color: black;
 		}
 
@@ -23,10 +23,6 @@
 		in {
 			display: inline-block;
 			margin-left: 30px;
-		}
-
-		.black {
-			color: black;
 		}
 
 		.blue {
@@ -46,10 +42,25 @@
 </head>
 <body>
 
+<h3>Determinants</h3>
 
+The determinant of a matrix in 3-dimensional coordinate space represents...
 
+	// <span class="blue">come back to this introduction later</span>
+
+The following properties hold for determinants
+
+	`det(AB) = det(A) \ det(B)`
+
+	`A` is invertible   `<=>`   `det(A) != 0`    `<=>`   `EE \ B in RR^(n xx n) \ \ : \ \ AB = I`
+
+	See <a href="../../year_i/linear_algebra/week_9_1.html">week 9</a> of the linear algebra notes for more properties
+	of determinants.
 <script>
+	// removes whitespace
 	document.body.innerHTML = document.body.innerHTML.trim()
+	Array.from(document.getElementsByTagName("div"))
+		 .forEach(e => e.innerHTML = e.innerHTML.trim().split(/\r?\n/).map(row => row.trim()).join('\n'))
 </script>
 
 </body>

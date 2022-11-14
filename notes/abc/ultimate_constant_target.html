@@ -1,0 +1,76 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			white-space: pre;
+		}
+
+		div {
+			display: inline-block;
+		}
+
+		a, a:visited {
+			color: black;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 0;
+			display: inline-block;
+		}
+
+		in {
+			display: inline-block;
+			margin-left: 30px;
+		}
+
+		.black {
+			color: black;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+		.grey {
+			color: grey;
+		}
+
+		.box {
+			border-style: solid;
+			border-width: 1px;
+			padding: 4px 8px;
+		}
+	</style>
+</head>
+<body>
+
+<h3>Ultimate - Constant Target <span style="font-weight: normal">(the target does not increase after the first two rounds)</span></h3>
+
+Assuming <b>linear stake</b> (the same stake is given to each selection),
+then our stake is given by
+
+    `"stake"_i = ("target"-"start"_i)/((sum_("odd" in "odds[]")^"num_selections" "odd") - "num_selections")`,
+
+with
+
+    `"start"_i = { (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 100, if i = 1), (\ \ "start"_(i - 1) + "profit"_(i - 1), \ \ \ "otherwise") :}`
+
+where `i` is the current step number, and the profit from a given step is given by
+
+    `"step_profit"_i = "stake" \ [(sum_(bar "odd" in "odds|win[]") bar "odd") - "num_selections"]`,
+
+where `"odds|win[]"` is the array of the respective odds of selections which won.
+
+If we restrict this further, so that the <i>odds</i> are <b>fully uniform</b>
+- all selections across every step have the same odd, `"odd"^'` - then we have
+
+    `"stake"_i = ("target"-"start"_i)/("num_selections" * ("odd"^' - 1))`
+
+<script>
+	document.body.innerHTML = document.body.innerHTML.trim()
+</script>
+
+</body>
+</html>
